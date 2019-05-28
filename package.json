@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "name": "@github/learning-lab-oss",
+  "version": "0.1.0",
+  "description": "Open sourced components from GitHub Learning Lab",
+  "author": "GitHub, Inc. <opensource+learning-lab-oss@github.com>",
+  "license": "MIT",
+  "keywords": [
+    "github-learning-lab",
+    "learning-lab",
+    "github",
+    "bot-actions",
+    "schema"
+  ],
+  "homepage": "https://github.com/github/learning-lab-oss#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github/learning-lab-oss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/github/learning-lab-oss/issues"
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "@github:registry": "https://npm.registry.github.com/",
+    "registry": "https://npm.registry.github.com/"
+  },
+  "engines": {
+    "node": "10.x.x",
+    "npm": "6.x.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
