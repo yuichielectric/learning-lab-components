@@ -24,11 +24,8 @@ module.exports = async (context, opts) => {
   }
 
   if (opts.hasOwnProperty('else') && success === false) {
-    if (Array.isArray(opts.else)) {
-      await context.runActions(context.step.slug, context, opts.else)
-    } else {
-      await context.runAction(context, opts.else)
-    }
+    const elseActions = Array.isArray(opts.else) ? opts.else : [opts.else]
+    await context.runActions(context.step.slug, context, elseActions)
   }
 
   return success
