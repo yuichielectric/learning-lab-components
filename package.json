@@ -31,7 +31,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "standard && jest"
+    "test": "standard && jest --coverage"
   },
   "dependencies": {
     "@octokit/rest": "^15.18.1",
@@ -51,6 +51,10 @@
     ]
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/tests/mockContext.js"
+    ]
   }
 }
