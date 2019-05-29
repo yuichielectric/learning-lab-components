@@ -1,4 +1,4 @@
-const stringToRegEx = require('../helpers/string-to-regex')
+const stringToRegEx = require('../../helpers/string-to-regex')
 const isRegExString = str => str.startsWith('/') && str.endsWith('/')
 
 module.exports = {

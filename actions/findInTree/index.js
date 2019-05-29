@@ -1,4 +1,4 @@
-const stringToRegEx = require('../helpers/string-to-regex')
+const stringToRegEx = require('../../helpers/string-to-regex')
 
 module.exports = async (context, opts) => {
   const reg = stringToRegEx(opts.path)
