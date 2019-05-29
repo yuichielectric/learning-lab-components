@@ -20,6 +20,16 @@
   "bugs": {
     "url": "https://github.com/github/learning-lab-oss/issues"
   },
+  "main": "index.js",
+  "files": [
+    "**/*",
+    "!/.git/",
+    "!/.github/",
+    "!*.test.js",
+    "!*.snap",
+    "!/tests/",
+    "!/coverage/"
+  ],
   "publishConfig": {
     "access": "restricted",
     "@github:registry": "https://npm.pkg.github.com/",
@@ -29,7 +39,6 @@
     "node": "10.x.x",
     "npm": "6.x.x"
   },
-  "main": "index.js",
   "scripts": {
     "test": "standard && jest --coverage"
   },
