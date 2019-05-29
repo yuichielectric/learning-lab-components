@@ -1,8 +1,6 @@
 const get = require('get-value')
 const { Context: ProbotContext } = require('probot/lib/context')
 
-const actions = require('../')
-
 // IMPORTANT:
 // This class is duck-typed based on the real Context object in GitHub Learning Lab.
 // It has only been given enough API surface area to support the existing actions.
