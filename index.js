@@ -1,1 +1,3 @@
-module.exports = require('./actions')
+const actions = require('./actions')
+
+module.exports = { actions }
