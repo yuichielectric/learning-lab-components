@@ -2,8 +2,8 @@ const { actions } = require('../index')
 const fs = require('fs')
 const path = require('path')
 
-const template = ({ key, title, description, rows }) => `# ${title}
-${description ? description + '\n\n' : ''}
+const template = ({ key, title, description, rows }) => `# ${title}: ${key}
+${description ? `> ${description}\n\n` : ''}
 ## Options
 
 | Title | Property | Description | Default | Required |
