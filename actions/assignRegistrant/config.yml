@@ -1,0 +1,16 @@
+title: Assign the registrant
+description: Assigns the registered user to an issue or pull request
+options:
+  - title: Issue
+    property: issue
+    default: Gets the issue number from the webhook payload
+    description: Title or number of the issue to close
+    type:
+      - number
+      - string
+examples:
+  - type: assignRegistrant
+  - type: assignRegistrant
+    issue: "Title of an issue"
+  - type: assignRegistrant
+    issue: 4

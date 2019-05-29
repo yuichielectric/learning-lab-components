@@ -1,0 +1,11 @@
+const Joi = require('joi')
+
+module.exports = Joi.object({
+  pullRequest: Joi.alternatives(Joi.string(), Joi.number())
+    .meta({ label: 'Pull request' })
+    .description('The number or title of the pull request to get. This will default to the pull request number from the trigger event.'),
+  waitForMergeable: Joi.boolean()
+    .meta({ label: 'Wait until mergeable' })
+    .description('Only move on to the next action when GitHub has calculated whether or not the pull request is mergeable.')
+    .default(false)
+})

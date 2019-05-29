@@ -1,0 +1,16 @@
+title: Close an issue
+description: Closes an issue on GitHub.
+usage: Provide an issue title or number, and the action will close that issue in the repository if it exists, otherwise it will throw an error.
+options:
+  - title: Issue
+    property: issue
+    default: Gets the issue number from the webhook payload
+    description: Title or number of the issue to close
+    type:
+      - number
+      - string
+examples:
+  - type: closeIssue
+    issue: "Title of an issue"
+  - type: closeIssue
+    issue: 4

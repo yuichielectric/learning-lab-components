@@ -1,0 +1,19 @@
+title: Merge a branch
+description: Merges a branch into another branch
+options:
+  - title: Head branch
+    property: head
+    required: true
+    description: Name of the branch to merge from
+    type: string
+  - title: Base branch
+    property: base
+    default: master
+    description: Name of the branch to merge into
+    type: string
+examples:
+  - type: mergeBranch
+    head: a-feature-branch
+  - type: mergeBranch
+    head: a-feature-branch
+    base: release-one

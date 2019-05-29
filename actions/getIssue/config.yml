@@ -1,0 +1,16 @@
+title: Get an Issue
+description: Gets an Issue from GitHub.
+options:
+  - title: Issue
+    property: issue
+    default: Gets the issue number from the webhook payload.
+    description: Issue title or number.
+    type:
+      - string
+      - number
+examples:
+  - type: getIssue
+  - type: getIssue
+    issue: 1
+  - type: getIssue
+    issue: "An existing issue"

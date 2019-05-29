@@ -1,0 +1,17 @@
+title: Get a file's contents
+description: Gets the contents of a file at a specific commit.
+options:
+  - title: File name
+    property: filename
+    required: true
+    description: Name of the file to retrieve
+    type: string
+  - title: Sha
+    property: sha
+    default: The head commit sha from the pull request or push payload
+    description: The sha at which to retrieve the file contents
+examples:
+  - type: getFileContents
+    filename: README.md
+  - type: getFileContents
+    filename: .github/ISSUE_TEMPLATE.md

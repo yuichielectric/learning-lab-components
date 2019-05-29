@@ -1,0 +1,16 @@
+title: Requests that the user review a PR
+description: Requests a Pull Request review from the registrant
+options:
+  - title: Pull Request
+    property: pullRequest
+    description: Pull Request to request a new review on
+    default: Gets the Pull Request number from the webhook payload
+    type:
+      - string
+      - number
+examples:
+  - type: requestReviewFromRegistrant
+  - type: requestReviewFromRegistrant
+    pullRequest: A pull request
+  - type: requestReviewFromRegistrant
+    pullRequest: 2

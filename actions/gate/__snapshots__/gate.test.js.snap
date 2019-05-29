@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gate runs multiple else actions 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "hello",
+      "number": 1,
+      "owner": "JasonEtco",
+      "repo": "example",
+    },
+  ],
+  Array [
+    Object {
+      "body": "hiya!",
+      "number": 1,
+      "owner": "JasonEtco",
+      "repo": "example",
+    },
+  ],
+]
+`;
+
+exports[`gate runs the else action when evaluating falsy 1`] = `
+Array [
+  Array [
+    Object {
+      "body": "hello",
+      "number": 1,
+      "owner": "JasonEtco",
+      "repo": "example",
+    },
+  ],
+]
+`;

@@ -1,0 +1,56 @@
+title: Conditional gate
+description: Decides if the next action(s) should be run, and if the step passes or fails.
+usage: Provide a conditional operation with a left, right and operator key. This can use `%___%` syntax to compare data from the action's context, like getting the relevant user's information or fields from the webhook payload.
+options:
+  - title: Left
+    property: left
+    description: The left side of the `if`
+    type: string
+  - title: Right
+    property: right
+    description: The right side of the `if`
+    type: string
+  - title: Operator
+    property: operator
+    description: A JavaScript-esque operator, like `===`, `>=`, etc.
+    type: string
+  - title: Gates
+    property: gates
+    description: To test multiple conditions, you can pass multiple gates as a list of objects.
+  - title: Every
+    property: every
+    description: If `gates` is set to a list of gates, then `every` requires that every one of those gates resolves to true, otherwise the action resolves to false.
+  - title: Action on failure
+    property: else
+    description: An action to take if the condition fails.
+    type: action
+examples:
+  - type: gate
+    left: "hello"
+    operator: "==="
+    right: "hello"
+
+    # Using context properties
+  - type: gate
+    left: "%payload.sender.login%"
+    operator: "==="
+    right: "%user.login%"
+
+    # Using an `else` action
+  - type: gate
+    left: "%payload.sender.login%"
+    operator: "==="
+    right: "%user.login%"
+    else:
+      - type: respond
+        with: "This returned false!"
+
+    # Using context properties
+  - type: gate
+    gates:
+      - left: "%payload.sender.login%"
+        operator: "==="
+        right: "%user.login%"
+      - left: "%payload.sender.login%"
+        operator: "==="
+        right: "JasonEtco"

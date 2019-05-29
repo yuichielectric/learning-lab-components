@@ -1,0 +1,21 @@
+title: Get a Pull Request
+description: Gets a Pull Request from GitHub.
+options:
+  - title: Pull Request
+    property: pullRequest
+    default: Gets the pull request number from the webhook payload.
+    description: Pull Request title or number.
+    type:
+      - string
+      - number
+  - title: Wait for `mergeable` field
+    property: waitForMergeable
+    default: true
+    description: Only move on when the pull request's mergeable field has been determined.
+    type: boolean
+examples:
+  - type: getPullRequest
+  - type: getPullRequest
+    pullRequest: 1
+  - type: getPullRequest
+    pullRequest: "An existing pull request"
