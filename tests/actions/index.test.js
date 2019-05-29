@@ -24,36 +24,14 @@ describe('actions', () => {
 
   it('README mentions all expected actions', async () => {
     const actionsReadme = fs.readFileSync(path.join(actionsDir, 'README.md'), { encoding: 'utf8' })
-    for (let actionName of actionNames) {
-      expect(actionsReadme).toContain(`\n* [${actionName}](./${actionName})\n`)
-    }
-  })
+    const expectedContents = `## Available actions
 
-  it('each action has the minimum set of required files', async () => {
-    for (let actionName of actionNames) {
-      const actionDirFiles =
-        fs.readdirSync(
-          path.join(actionsDir, actionName),
-          { withFileTypes: true }
-        )
-          .filter(ent => ent.isFile())
-          .map(ent => ent.name)
+<!-- START_ACTIONS_LIST -->
+` + actionNames.map(name => `* [${name}](./${name})`).join('\n') + `
 
-      // Has "README.md" file?
-      expect(actionDirFiles.find(name => name === 'README.md')).toBeTruthy()
-
-      // Has "config.yml" file?
-      expect(actionDirFiles.find(name => name === 'config.yml')).toBeTruthy()
-
-      // Has "index.js" file?
-      expect(actionDirFiles.find(name => name === 'index.js')).toBeTruthy()
-
-      // Has "schema.js" file?
-      expect(actionDirFiles.find(name => name === 'schema.js')).toBeTruthy()
-
-      // Has "${actionName}.test.js" file?
-      expect(actionDirFiles.find(name => name === `${actionName}.test.js`)).toBeTruthy()
-    }
+<!-- END_ACTIONS_LIST -->
+`
+    expect(actionsReadme).toContain(expectedContents)
   })
 
   it('associated documentation files exist for all expected actions', async () => {
