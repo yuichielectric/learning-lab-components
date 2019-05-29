@@ -23,9 +23,9 @@ describe('actions', () => {
   })
 
   it('README mentions all expected actions', async () => {
-    const actionsReadme = fs.readFileSync(path.join(actionsDir, 'README.md'))
+    const actionsReadme = fs.readFileSync(path.join(actionsDir, 'README.md'), { encoding: 'utf8' })
     for (let actionName of actionNames) {
-      expect(actionsReadme.includes(`\n* [${actionName}](./${actionName})\n`)).toBe(true)
+      expect(actionsReadme).toContain(`\n* [${actionName}](./${actionName})\n`)
     }
   })
 
