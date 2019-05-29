@@ -56,7 +56,7 @@ describe('actions', () => {
     }
   })
 
-  it('each action has an associated documentation file generated', async () => {
+  it('associated documentation files exist for all expected actions', async () => {
     const actionsDocsFiles = fs.readdirSync(actionsDocsDir, { withFileTypes: true })
       .filter(ent => ent.isFile())
       .map(ent => ent.name)
