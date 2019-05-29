@@ -28,7 +28,9 @@
     "!*.test.js",
     "!*.snap",
     "!/tests/",
-    "!/coverage/"
+    "!/coverage/",
+    "!/docs/",
+    "!/script/"
   ],
   "publishConfig": {
     "access": "restricted",
