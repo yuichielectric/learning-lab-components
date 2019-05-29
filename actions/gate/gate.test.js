@@ -9,8 +9,6 @@ describe('gate', () => {
     context = mockContext({
       body: 'test',
       issue: { number: 1 }
-    }, {
-      issues: { createComment: jest.fn() }
     })
   })
 
@@ -73,8 +71,8 @@ describe('gate', () => {
       }
     })
 
-    expect(context.github.issues.createComment).toHaveBeenCalled()
-    expect(context.github.issues.createComment.mock.calls).toMatchSnapshot()
+    expect(context.runActions).toHaveBeenCalled()
+    expect(context.runActions.mock.calls).toMatchSnapshot()
   })
 
   it('runs multiple else actions', async () => {
@@ -91,8 +89,8 @@ describe('gate', () => {
       }]
     })
 
-    expect(context.github.issues.createComment).toHaveBeenCalledTimes(2)
-    expect(context.github.issues.createComment.mock.calls).toMatchSnapshot()
+    expect(context.runActions).toHaveBeenCalled()
+    expect(context.runActions.mock.calls).toMatchSnapshot()
   })
 
   it('evalutes correctly with the `includes` operator', async () => {

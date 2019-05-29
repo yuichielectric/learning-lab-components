@@ -34,19 +34,23 @@
     "lint": "standard",
     "test": "npm run lint && jest"
   },
+  "dependencies": {
+    "@octokit/rest": "^15.18.1",
+    "get-value": "^3.0.1",
+    "htmlparser2": "^3.10.1",
+    "joi": "^14.3.1"
+  },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.4.5",
     "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
     "acorn": "^6.1.1",
     "ajv": "^6.10.0",
     "babel-eslint": "^10.0.1",
-    "expect": "^24.7.1",
     "jest": "^24.8.0",
-    "jest-snapshot": "^24.7.1",
     "nock": "^10.0.6",
-    "probot": "^9.2.13",
+    "probot": "^7.5.3",
     "standard": "^12.0.1"
   },
   "standard": {
@@ -57,11 +61,5 @@
     "parserOptions": {
       "ecmaVersion": 2018
     }
-  },
-  "dependencies": {
-    "@octokit/rest": "^16.27.0",
-    "get-value": "^3.0.1",
-    "htmlparser2": "^3.10.1",
-    "joi": "^14.3.1"
   }
 }
