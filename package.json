@@ -31,8 +31,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
-    "test": "npm run lint && jest"
+    "test": "standard && jest"
   },
   "dependencies": {
     "@octokit/rest": "^15.18.1",
