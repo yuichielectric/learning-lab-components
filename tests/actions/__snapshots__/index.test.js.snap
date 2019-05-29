@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions module has properties for all expected actions 1`] = `
+Array [
+  "assignRegistrant",
+  "closeIssue",
+  "createFile",
+  "createIssue",
+  "createLabel",
+  "createProjectBoard",
+  "createPullRequest",
+  "createPullRequestComment",
+  "createReview",
+  "createStatus",
+  "deleteBranch",
+  "findInTree",
+  "gate",
+  "getFileContents",
+  "getIssue",
+  "getPullRequest",
+  "getTree",
+  "htmlContainsTag",
+  "mergeBranch",
+  "mergePullRequest",
+  "octokit",
+  "removeBranchProtection",
+  "requestReviewFromRegistrant",
+  "respond",
+  "updateBranchProtection",
+]
+`;

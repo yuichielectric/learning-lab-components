@@ -19,6 +19,7 @@ describe('actions', () => {
   it('module has properties for all expected actions', async () => {
     const actionKeys = Object.keys(actions).sort()
     expect(actionKeys).toEqual(actionNames)
+    expect(actionKeys).toMatchSnapshot()
   })
 
   it('README mentions all expected actions', async () => {
