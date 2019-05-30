@@ -1,33 +1,16 @@
-const actions = {
-  assignRegistrant: require('./assignRegistrant'),
-  closeIssue: require('./closeIssue'),
-  createFile: require('./createFile'),
-  createIssue: require('./createIssue'),
-  createLabel: require('./createLabel'),
-  createProjectBoard: require('./createProjectBoard'),
-  createPullRequest: require('./createPullRequest'),
-  createPullRequestComment: require('./createPullRequestComment'),
-  createReview: require('./createReview'),
-  createStatus: require('./createStatus'),
-  deleteBranch: require('./deleteBranch'),
-  findInTree: require('./findInTree'),
-  gate: require('./gate'),
-  getFileContents: require('./getFileContents'),
-  getIssue: require('./getIssue'),
-  getPullRequest: require('./getPullRequest'),
-  getTree: require('./getTree'),
-  htmlContainsTag: require('./htmlContainsTag'),
-  mergeBranch: require('./mergeBranch'),
-  mergePullRequest: require('./mergePullRequest'),
-  octokit: require('./octokit'),
-  removeBranchProtection: require('./removeBranchProtection'),
-  requestReviewFromRegistrant: require('./requestReviewFromRegistrant'),
-  respond: require('./respond'),
-  updateBranchProtection: require('./updateBranchProtection')
-}
+const fs = require('fs')
 
-for (const action in actions) {
-  actions[action].schema = require(`./${action}/schema`)
+let actionNames =
+  fs.readdirSync(__dirname, { withFileTypes: true })
+    .filter(ent => ent.isDirectory())
+    .map(ent => ent.name)
+    .sort()
+
+const actions = {}
+
+for (let actionName of actionNames) {
+  actions[actionName] = require(`./${actionName}`)
+  actions[actionName].schema = require(`./${actionName}/schema`)
 }
 
 module.exports = actions
