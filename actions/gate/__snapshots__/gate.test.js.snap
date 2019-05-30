@@ -3,57 +3,6 @@
 exports[`gate runs multiple else actions 1`] = `
 Array [
   Array [
-    "my-step",
-    Context {
-      "fromFile": [MockFunction],
-      "github": Object {
-        "hook": Object {
-          "before": [MockFunction],
-        },
-      },
-      "host": undefined,
-      "id": undefined,
-      "log": Object {
-        "child": [Function],
-        "debug": [MockFunction],
-        "error": [MockFunction],
-        "info": [MockFunction],
-      },
-      "name": undefined,
-      "payload": Object {
-        "body": "test",
-        "issue": Object {
-          "number": 1,
-        },
-        "repository": Object {
-          "name": "example",
-          "owner": Object {
-            "login": "JasonEtco",
-          },
-        },
-      },
-      "preferences": null,
-      "protocol": undefined,
-      "registration": Object {
-        "id": 123,
-      },
-      "runActions": [MockFunction] {
-        "calls": [Circular],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-      "step": Object {
-        "slug": "my-step",
-      },
-      "url": undefined,
-      "user": Object {
-        "login": "JasonEtco",
-      },
-    },
     Array [
       Object {
         "type": "respond",
@@ -64,6 +13,11 @@ Array [
         "with": "hiya!",
       },
     ],
+    Object {
+      "stack": Array [
+        "gate.else",
+      ],
+    },
   ],
 ]
 `;
@@ -71,63 +25,17 @@ Array [
 exports[`gate runs the else action when evaluating falsy 1`] = `
 Array [
   Array [
-    "my-step",
-    Context {
-      "fromFile": [MockFunction],
-      "github": Object {
-        "hook": Object {
-          "before": [MockFunction],
-        },
-      },
-      "host": undefined,
-      "id": undefined,
-      "log": Object {
-        "child": [Function],
-        "debug": [MockFunction],
-        "error": [MockFunction],
-        "info": [MockFunction],
-      },
-      "name": undefined,
-      "payload": Object {
-        "body": "test",
-        "issue": Object {
-          "number": 1,
-        },
-        "repository": Object {
-          "name": "example",
-          "owner": Object {
-            "login": "JasonEtco",
-          },
-        },
-      },
-      "preferences": null,
-      "protocol": undefined,
-      "registration": Object {
-        "id": 123,
-      },
-      "runActions": [MockFunction] {
-        "calls": [Circular],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": undefined,
-          },
-        ],
-      },
-      "step": Object {
-        "slug": "my-step",
-      },
-      "url": undefined,
-      "user": Object {
-        "login": "JasonEtco",
-      },
-    },
     Array [
       Object {
         "type": "respond",
         "with": "hello",
       },
     ],
+    Object {
+      "stack": Array [
+        "gate.else",
+      ],
+    },
   ],
 ]
 `;

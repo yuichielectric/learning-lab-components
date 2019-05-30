@@ -10,7 +10,7 @@ function evaluate (options) {
   }
 }
 
-module.exports = async (context, opts) => {
+module.exports = async (context, opts, { stack = [] } = {}) => {
   let success
   if (opts.hasOwnProperty('gates')) {
     // Either Array.some or Array.every
@@ -24,8 +24,12 @@ module.exports = async (context, opts) => {
   }
 
   if (opts.hasOwnProperty('else') && success === false) {
+    if (stack.length === 0) {
+      stack.push('gate')
+    }
+    stack[stack.length - 1] += '.else'
     const elseActions = Array.isArray(opts.else) ? opts.else : [opts.else]
-    await context.runActions(context.step.slug, context, elseActions)
+    await context.runActions(elseActions, { stack })
   }
 
   return success
