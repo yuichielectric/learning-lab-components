@@ -1,7 +1,6 @@
 {
-  "private": true,
   "name": "@github/learning-lab-oss",
-  "version": "0.1.0",
+  "version": "1.0.0-alpha.1",
   "description": "Open sourced components from GitHub Learning Lab",
   "author": "GitHub, Inc. <opensource+learning-lab-oss@github.com>",
   "license": "MIT",
