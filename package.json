@@ -1,8 +1,8 @@
 {
-  "name": "@github/learning-lab-oss",
-  "version": "1.0.0-alpha.1",
+  "name": "@github/learning-lab-components",
+  "version": "1.0.0-beta.1",
   "description": "Open sourced components from GitHub Learning Lab",
-  "author": "GitHub, Inc. <opensource+learning-lab-oss@github.com>",
+  "author": "GitHub, Inc. <opensource+learning-lab-components@github.com>",
   "license": "MIT",
   "keywords": [
     "github-learning-lab",
@@ -11,13 +11,13 @@
     "bot-actions",
     "schema"
   ],
-  "homepage": "https://github.com/github/learning-lab-oss#readme",
+  "homepage": "https://github.com/github/learning-lab-components#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github/learning-lab-oss.git"
+    "url": "git+https://github.com/github/learning-lab-components.git"
   },
   "bugs": {
-    "url": "https://github.com/github/learning-lab-oss/issues"
+    "url": "https://github.com/github/learning-lab-components/issues"
   },
   "main": "index.js",
   "files": [
