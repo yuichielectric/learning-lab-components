@@ -13,3 +13,4 @@ module.exports = Joi.object({
     .description('Return an array of values instead of just the first one that matches.')
     .default(false)
 })
+  .description('Finds a file in a given tree, either by path or matching a RegEx')

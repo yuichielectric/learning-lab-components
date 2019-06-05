@@ -13,3 +13,4 @@ module.exports = Joi.object({
     .meta({ label: 'Attribute' })
     .description('An optional HTML attribute to check for.')
 })
+  .description('Checks if the provided HTML string contains a specific HTML tag')

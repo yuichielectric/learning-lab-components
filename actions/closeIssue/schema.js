@@ -5,3 +5,4 @@ module.exports = Joi.object({
     .meta({ label: 'Issue' })
     .description('The number or title of the issue to close.')
 })
+  .description('Closes an issue on GitHub.')

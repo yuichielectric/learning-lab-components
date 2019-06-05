@@ -5,3 +5,4 @@ module.exports = Joi.object({
     .meta({ label: 'Issue' })
     .description('The number or title of the issue to assign.')
 })
+  .description('Assigns the registered user to an issue or pull request')

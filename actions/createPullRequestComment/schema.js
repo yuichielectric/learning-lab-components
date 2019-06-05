@@ -19,3 +19,4 @@ module.exports = Joi.object({
     .description('The title or number of the pull request. If omitted, the comment will be created on the pull request from the trigger event.'),
   data
 })
+  .description('Creates a comment on a pull request on GitHub')

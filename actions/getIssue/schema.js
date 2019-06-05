@@ -5,3 +5,4 @@ module.exports = Joi.object({
     .meta({ label: 'Issue' })
     .description('The number or title of the issue to get. This will default to the issue number from the trigger event.')
 })
+  .description('Gets an Issue from GitHub.')

@@ -25,3 +25,4 @@ module.exports = gate.append({
     .items(Joi.object().unknown())
     .single()
 })
+  .description('Decides if the next action(s) should be run, and if the step passes or fails.')

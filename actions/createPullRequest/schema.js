@@ -24,3 +24,4 @@ module.exports = Joi.object({
     .items(Joi.string()),
   data
 })
+  .description('Opens a new Pull Request on GitHub.')

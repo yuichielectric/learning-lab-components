@@ -25,3 +25,4 @@ module.exports = Joi.object({
     .meta({ label: 'Context' })
     .description('A unique identifier for this status - this can be used to overwrite an existing status on the same sha.')
 })
+  .description('Creates a status on a commit or pull request')

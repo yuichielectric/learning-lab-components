@@ -14,3 +14,4 @@ module.exports = Joi.object({
     .items(Joi.string())
     .min(1)
 })
+  .description('Creates a new Project Board in the user\'s repository')

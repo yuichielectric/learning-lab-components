@@ -10,3 +10,4 @@ module.exports = Joi.object({
     .description('The base branch to merge into. This defaults to `master`.')
     .default('master')
 })
+  .description('Merges a branch into another branch')

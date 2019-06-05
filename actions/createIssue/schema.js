@@ -16,3 +16,4 @@ module.exports = Joi.object({
     .items(Joi.string()),
   data
 })
+  .description('Creates a new issue on GitHub.')

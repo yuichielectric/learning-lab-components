@@ -14,3 +14,4 @@ module.exports = Joi.object({
     .meta({ label: 'Description' })
     .description('The description of the label.')
 })
+  .description('Creates a new label on GitHub.')

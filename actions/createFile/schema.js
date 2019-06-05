@@ -18,3 +18,4 @@ module.exports = Joi.object({
     .description('The name of the file to be created. This can include a path, like `example/file.md`.'),
   data
 })
+  .description('Creates a new file')

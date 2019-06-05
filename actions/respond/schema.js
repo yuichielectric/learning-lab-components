@@ -11,3 +11,4 @@ module.exports = Joi.object({
     .description('The number or title of the issue or pull request to comment on. This will default to the number from the trigger event.'),
   data
 })
+  .description('Posts a comment on an issue or pull request')
