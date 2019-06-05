@@ -2,7 +2,7 @@ const { actions } = require('../index')
 const fs = require('fs')
 const path = require('path')
 
-const template = ({ key, title, description, rows }) => `# ${title}: ${key}
+const template = ({ key, description, rows }) => `# \`${key}\`
 ${description ? `> ${description}\n\n` : ''}
 ## Options
 
@@ -10,8 +10,6 @@ ${description ? `> ${description}\n\n` : ''}
 | :---- | :--- | :---------- | :------ | :------- |
 ${rows}
 `
-
-const pathToDocs = path.join(__dirname, '..', 'docs', 'actions')
 
 function mapChildrenToRows (children) {
   return Object.keys(children).reduce((prev, key) => {
@@ -34,7 +32,7 @@ function generate (actionKey) {
 }
 
 for (const actionKey in actions) {
-  const pathToDoc = path.join(pathToDocs, `${actionKey}.md`)
+  const pathToDoc = path.join(__dirname, '..', 'actions', actionKey, 'README.md')
   const body = generate(actionKey)
   fs.writeFileSync(pathToDoc, body)
 }
