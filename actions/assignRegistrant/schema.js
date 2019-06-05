@@ -8,25 +8,19 @@ module.exports = Joi.object({
   .description('Assigns the registered user to an issue or pull request')
   .example(
     [
-      { issue: 'Title of an issue' },
-      { context: 'Use the title of an issue' }
+      {},
+      { context: 'Use the issue from the webhook payload:' }
     ],
-    [
-      { issue: 4 },
-      { context: 'Use an issue number' }
-    ]
-  )
-  .example(
     [
       {
         issue: 'Title of an issue'
       },
-      { context: '' }
+      { context: 'Use the title of an issue:' }
     ],
     [
       {
         issue: 4
       },
-      { context: '' }
+      { context: 'Use an issue number:' }
     ]
   )

@@ -4,14 +4,20 @@ Assigns the registered user to an issue or pull request
 
 ## Examples
 
-Use the title of an issue
+Use the issue from the webhook payload:
+
+```yaml
+type: assignRegistrant
+```
+
+Use the title of an issue:
 
 ```yaml
 type: assignRegistrant
 issue: Title of an issue
 ```
 
-Use an issue number
+Use an issue number:
 
 ```yaml
 type: assignRegistrant
