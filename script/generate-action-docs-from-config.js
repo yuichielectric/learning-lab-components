@@ -68,7 +68,7 @@ ${this.reduceConfigsToRows(config)}`
 
   updateTableOfContents (dirs) {
     const readmePath = path.join(this.pathToActions, 'README.md')
-    const list = dirs.reduce((prev, dir) => `${prev}* [${dir}](./${dir})\n`, '')
+    const list = dirs.reduce((prev, dir) => `${prev}- [${dir}](./${dir})\n`, '')
     const readme = fs.readFileSync(readmePath, 'utf8')
     const newReadme = readme.replace(tocReg, `${START_ACTIONS_LIST}\n${list}\n${END_ACTIONS_LIST}`)
     return fs.writeFileSync(readmePath, newReadme)
