@@ -26,7 +26,7 @@ function mapChildrenToRows (children) {
 
 function mapExamples (examples, key) {
   const blocks = examples
-    .map(obj => `${obj.options.context}\n\n\`\`\`yaml\n${jsYaml.safeDump({ type: key, ...obj.value })}\`\`\``)
+    .map(obj => `${obj.options.context ? `${obj.options.context}\n\n` : ''}\`\`\`yaml\n${jsYaml.safeDump({ type: key, ...obj.value })}\`\`\``)
     .join('\n\n')
   return `## Examples\n\n${blocks}`
 }
