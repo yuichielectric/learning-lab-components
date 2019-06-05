@@ -6,14 +6,14 @@ Assigns the registered user to an issue or pull request
 
 Use the title of an issue
 
-```
+```yaml
 type: assignRegistrant
 issue: Title of an issue
 ```
 
 Use an issue number
 
-```
+```yaml
 type: assignRegistrant
 issue: 4
 ```
