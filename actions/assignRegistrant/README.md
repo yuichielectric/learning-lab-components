@@ -1,20 +1,26 @@
-# Assign the registrant
+# `assignRegistrant`
 
-`assignRegistrant`: Assigns the registered user to an issue or pull request
+Assigns the registered user to an issue or pull request
 
+## Examples
 
+Use the title of an issue
 
-```yaml
-actions:
-- type: assignRegistrant
-- type: assignRegistrant
-  issue: Title of an issue
-- type: assignRegistrant
-  issue: 4
+```
+type: assignRegistrant
+issue: Title of an issue
+```
+
+Use an issue number
+
+```
+type: assignRegistrant
+issue: 4
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Issue | `issue` | Title or number of the issue to close | Gets the issue number from the webhook payload |  |
+| Issue | `issue` | The number or title of the issue to assign. | `` |  |
+

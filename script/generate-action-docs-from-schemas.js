@@ -1,9 +1,14 @@
 const { actions } = require('../index')
 const fs = require('fs')
 const path = require('path')
+const jsYaml = require('js-yaml')
 
-const template = ({ key, description, rows }) => `# \`${key}\`
-${description ? `> ${description}\n\n` : ''}
+const template = ({ key, description, rows, examples }) => `# \`${key}\`
+
+${description}
+
+${examples}
+
 ## Options
 
 | Title | Property | Description | Default | Required |
@@ -19,15 +24,24 @@ function mapChildrenToRows (children) {
   }, '')
 }
 
+function mapExamples (examples, key) {
+  const blocks = examples
+    .map(obj => `${obj.options.context}\n\n\`\`\`\n${jsYaml.safeDump({ type: key, ...obj.value })}\`\`\``)
+    .join('\n\n')
+  return `## Examples\n\n${blocks}`
+}
+
 function generate (actionKey) {
   const schema = actions[actionKey].schema.describe()
-
   const rows = mapChildrenToRows(schema.children)
+  const examples = schema.examples ? mapExamples(schema.examples, actionKey) : ''
+
   return template({
     key: actionKey,
     title: (schema.meta && schema.meta[0] && schema.meta[0].label) || actionKey,
     description: schema.description || '',
-    rows
+    rows,
+    examples
   })
 }
 
