@@ -14,3 +14,24 @@ module.exports = Joi.object({
     .default(false)
 })
   .description('Finds a file in a given tree, either by path or matching a RegEx')
+  .example(
+    [
+      {
+        path: 'example.md'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        path: '/^_posts\\//'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        multiple: true,
+        path: '/^_posts\\//'
+      },
+      { context: '' }
+    ]
+  )

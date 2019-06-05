@@ -11,3 +11,18 @@ module.exports = Joi.object({
     .default('master')
 })
   .description('Merges a branch into another branch')
+  .example(
+    [
+      {
+        head: 'a-feature-branch'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        head: 'a-feature-branch',
+        base: 'release-one'
+      },
+      { context: '' }
+    ]
+  )

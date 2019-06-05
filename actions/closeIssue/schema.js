@@ -6,3 +6,17 @@ module.exports = Joi.object({
     .description('The number or title of the issue to close.')
 })
   .description('Closes an issue on GitHub.')
+  .example(
+    [
+      {
+        issue: 'Title of an issue'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        issue: 4
+      },
+      { context: '' }
+    ]
+  )

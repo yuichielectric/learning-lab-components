@@ -10,3 +10,17 @@ module.exports = Joi.object({
     .default(false)
 })
   .description('Gets a Pull Request from GitHub.')
+  .example(
+    [
+      {
+        pullRequest: 1
+      },
+      { context: '' }
+    ],
+    [
+      {
+        pullRequest: 'An existing pull request'
+      },
+      { context: '' }
+    ]
+  )

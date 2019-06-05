@@ -7,3 +7,26 @@ module.exports = Joi.object({
     .required()
 }).options({ allowUnknown: true })
   .description('Calls a method in the Octokit library')
+  .example(
+    [
+      {
+        method: 'issues.create',
+        title: 'A new issue'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        method: 'pullRequests.merge',
+        number: 2
+      },
+      { context: '' }
+    ],
+    [
+      {
+        method: 'migrations.getImportStatus',
+        requester: 'user'
+      },
+      { context: '' }
+    ]
+  )

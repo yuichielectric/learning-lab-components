@@ -16,3 +16,17 @@ module.exports = Joi.object({
       { context: 'Use an issue number' }
     ]
   )
+  .example(
+    [
+      {
+        issue: 'Title of an issue'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        issue: 4
+      },
+      { context: '' }
+    ]
+  )

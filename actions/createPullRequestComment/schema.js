@@ -20,3 +20,31 @@ module.exports = Joi.object({
   data
 })
   .description('Creates a comment on a pull request on GitHub')
+  .example(
+    [
+      {
+        body: 'suggested-changes.md',
+        file: 'some-file.js',
+        position: 5
+      },
+      { context: '' }
+    ],
+    [
+      {
+        pullRequest: 10,
+        body: 'suggested-changes.md',
+        file: 'some-file.js',
+        position: 5
+      },
+      { context: '' }
+    ],
+    [
+      {
+        pullRequest: 'Some pull request',
+        body: 'suggested-changes.md',
+        file: 'some-file.js',
+        position: 5
+      },
+      { context: '' }
+    ]
+  )

@@ -7,3 +7,11 @@ module.exports = Joi.object({
     .default('master')
 })
   .description('Removes the branch protection on a branch in the course repository')
+  .example(
+    [
+      {
+        branch: 'my-protected-branch'
+      },
+      { context: '' }
+    ]
+  )

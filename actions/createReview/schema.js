@@ -20,3 +20,20 @@ module.exports = Joi.object({
   data
 })
   .description('Creates a Pull Request review on GitHub')
+  .example(
+    [
+      {
+        body: 'review-body.md',
+        event: 'REQUEST_CHANGES'
+      },
+      { context: '' }
+    ],
+    [
+      {
+        body: 'review-body.md',
+        event: 'REQUEST_CHANGES',
+        number: 3
+      },
+      { context: '' }
+    ]
+  )
