@@ -18,6 +18,18 @@ describe('actions', () => {
     expect(actionKeys).toMatchSnapshot()
   })
 
+  it('README mentions all expected actions', async () => {
+    const actionsReadme = fs.readFileSync(path.join(actionsDir, 'README.md'), { encoding: 'utf8' })
+    const expectedContents = `## Available actions
+
+<!-- START_ACTIONS_LIST -->
+${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
+
+<!-- END_ACTIONS_LIST -->
+`
+    expect(actionsReadme).toContain(expectedContents)
+  })
+
   describe.each(actionNames)('the action "%s"', (actionName) => {
     it('has the minimum set of required files', async () => {
       const actionDirFiles =
