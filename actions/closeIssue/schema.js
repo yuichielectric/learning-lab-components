@@ -8,15 +8,19 @@ module.exports = Joi.object({
   .description('Closes an issue on GitHub.')
   .example(
     [
+      {},
+      { context: 'Use the issue from the webhook payload:' }
+    ],
+    [
       {
         issue: 'Title of an issue'
       },
-      { context: '' }
+      { context: 'Use the title of an issue:' }
     ],
     [
       {
         issue: 4
       },
-      { context: '' }
+      { context: 'Use an issue number:' }
     ]
   )

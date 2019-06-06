@@ -20,7 +20,7 @@ module.exports = Joi.object({
         html: '<html><div>Hello!</div></html>',
         tag: 'div'
       },
-      { context: '' }
+      { context: 'Check if the provided HTML code contains a `<div>` tag:' }
     ],
     [
       {
@@ -28,6 +28,6 @@ module.exports = Joi.object({
         tag: 'img',
         attribute: 'src'
       },
-      { context: '' }
+      { context: 'Check if the provided HTML code contains an `<img>` tag with an `src` attribute:' }
     ]
   )

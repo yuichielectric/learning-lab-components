@@ -27,7 +27,7 @@ module.exports = Joi.object({
         file: 'some-file.js',
         position: 5
       },
-      { context: '' }
+      { context: 'Create the comment on the pull request from the webhook event:' }
     ],
     [
       {
@@ -36,7 +36,7 @@ module.exports = Joi.object({
         file: 'some-file.js',
         position: 5
       },
-      { context: '' }
+      { context: 'Use the number of a pull request:' }
     ],
     [
       {
@@ -45,6 +45,6 @@ module.exports = Joi.object({
         file: 'some-file.js',
         position: 5
       },
-      { context: '' }
+      { context: 'Use a pull request title:' }
     ]
   )

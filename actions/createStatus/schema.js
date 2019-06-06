@@ -29,7 +29,11 @@ module.exports = Joi.object({
   .example(
     [
       {
-        state: 'success',
+        state: {
+          left: true,
+          operator: '===',
+          right: false
+        },
         failure: {
           description: 'Your pull request needs a description in the body. Please edit the pull request to include a body.',
           target_url: 'https://help.github.com/articles/editing-a-comment/'
@@ -39,13 +43,13 @@ module.exports = Joi.object({
           target_url: 'https://help.github.com/articles/creating-a-pull-request/#creating-the-pull-request'
         }
       },
-      { context: '' }
+      { context: 'Use a conditional to determine the state:' }
     ],
     [
       {
         state: 'failure',
         context: 'my-special-context'
       },
-      { context: '' }
+      { context: 'Specify a context to be able to overwrite the status in a later action:' }
     ]
   )

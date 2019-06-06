@@ -20,8 +20,7 @@ module.exports = Joi.object({
       {
         name: 'a label',
         color: 'f87000'
-      },
-      { context: '' }
+      }
     ],
     [
       {
@@ -29,6 +28,6 @@ module.exports = Joi.object({
         color: 'f87000',
         description: 'This label is used to label things'
       },
-      { context: '' }
+      { context: 'A description can also be included:' }
     ]
   )

@@ -8,15 +8,11 @@ module.exports = Joi.object({
   .description('Merges a Pull Request on GitHub.')
   .example(
     [
-      {
-        pullRequest: 1
-      },
-      { context: '' }
+      { pullRequest: 1 },
+      { context: 'Use a pull request number:' }
     ],
     [
-      {
-        pullRequest: 'An existing pull request'
-      },
-      { context: '' }
+      { pullRequest: 'An existing pull request' },
+      { context: 'Use the title of a pull request:' }
     ]
   )

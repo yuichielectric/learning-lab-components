@@ -8,15 +8,11 @@ module.exports = Joi.object({
   .description('Gets an Issue from GitHub.')
   .example(
     [
-      {
-        issue: 1
-      },
-      { context: '' }
+      { issue: 'An existing issue' },
+      { context: 'Use the title of an issue:' }
     ],
     [
-      {
-        issue: 'An existing issue'
-      },
-      { context: '' }
+      { issue: 1 },
+      { context: 'Use an issue number:' }
     ]
   )

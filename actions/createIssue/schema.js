@@ -25,7 +25,6 @@ module.exports = Joi.object({
         comments: [
           'issue-comment.md'
         ]
-      },
-      { context: '' }
+      }
     ]
   )

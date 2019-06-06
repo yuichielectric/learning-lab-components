@@ -33,7 +33,7 @@ module.exports = gate.append({
         operator: '===',
         right: 'hello'
       },
-      { context: '' }
+      { context: 'Check if the left and right values are equal:' }
     ],
     [
       {
@@ -41,7 +41,7 @@ module.exports = gate.append({
         operator: '===',
         right: '%user.login%'
       },
-      { context: '' }
+      { context: 'Compare different values from the context of the action:' }
     ],
     [
       {
@@ -55,7 +55,7 @@ module.exports = gate.append({
           }
         ]
       },
-      { context: '' }
+      { context: 'Use the `else` property to run actions if the condition is falsey:' }
     ],
     [
       {
@@ -72,6 +72,6 @@ module.exports = gate.append({
           }
         ]
       },
-      { context: '' }
+      { context: 'Test multiple conditions:' }
     ]
   )

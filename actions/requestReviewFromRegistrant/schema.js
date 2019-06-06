@@ -11,12 +11,12 @@ module.exports = Joi.object({
       {
         pullRequest: 'A pull request'
       },
-      { context: '' }
+      { context: 'Use the title of a pull request:' }
     ],
     [
       {
         pullRequest: 2
       },
-      { context: '' }
+      { context: 'Use a pull request number:' }
     ]
   )

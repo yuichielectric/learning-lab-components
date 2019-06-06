@@ -20,7 +20,7 @@ module.exports = Joi.object({
       {
         name: 'New board'
       },
-      { context: '' }
+      { context: 'Create a new project board:' }
     ],
     [
       {
@@ -32,6 +32,6 @@ module.exports = Joi.object({
           'Done'
         ]
       },
-      { context: '' }
+      { context: 'Create a project board with a description and some columns:' }
     ]
   )

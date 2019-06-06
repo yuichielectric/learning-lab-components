@@ -24,29 +24,29 @@ module.exports = Joi.object({
       {
         filename: 'README.md',
         data: {
-          bestUser: 'JasonEtco'
+          foo: 'bar'
         }
       },
-      { context: '' }
+      { context: 'Include some data to be passed as {{ variables }}:' }
     ],
     [
       {
         filename: 'response.md'
       },
-      { context: '' }
+      { context: 'Automatically use the repository\'s default branch:' }
     ],
     [
       {
         filename: 'response.md',
         branch: 'my-feature-branch'
       },
-      { context: '' }
+      { context: 'Specify a branch:' }
     ],
     [
       {
         filename: 'example-codeowners.md',
         new_name: '.github/CODEOWNERS'
       },
-      { context: '' }
+      { context: 'Name the file something new in the repository:' }
     ]
   )

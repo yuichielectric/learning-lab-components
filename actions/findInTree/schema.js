@@ -16,22 +16,18 @@ module.exports = Joi.object({
   .description('Finds a file in a given tree, either by path or matching a RegEx')
   .example(
     [
-      {
-        path: 'example.md'
-      },
-      { context: '' }
+      { path: 'example.md' },
+      { context: 'Find the `example.md` file in the tree:' }
     ],
     [
-      {
-        path: '/^_posts\\//'
-      },
-      { context: '' }
+      { path: '/^_posts\\//' },
+      { context: 'Find the first file that starts with `_posts/`:' }
     ],
     [
       {
         multiple: true,
         path: '/^_posts\\//'
       },
-      { context: '' }
+      { context: 'Find all files that start with `_posts/`:' }
     ]
   )
