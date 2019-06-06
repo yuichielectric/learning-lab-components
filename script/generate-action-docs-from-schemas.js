@@ -70,3 +70,21 @@ for (const actionKey in actions) {
   const body = generate(actionKey)
   fs.writeFileSync(pathToDoc, body)
 }
+
+/**
+ * Update the table of contents, the list of actions,
+ * in `/actions/README.md`.
+ */
+function updateTableOfContents () {
+  const START_ACTIONS_LIST = '<!-- START_ACTIONS_LIST -->'
+  const END_ACTIONS_LIST = '<!-- END_ACTIONS_LIST -->'
+  const tocReg = new RegExp(START_ACTIONS_LIST + '[\\s\\S]+' + END_ACTIONS_LIST)
+
+  const readmePath = path.join(__dirname, '..', 'actions', 'README.md')
+  const list = Object.keys(actions).reduce((prev, dir) => `${prev}- [${dir}](./${dir})\n`, '')
+  const readme = fs.readFileSync(readmePath, 'utf8')
+  const newReadme = readme.replace(tocReg, `${START_ACTIONS_LIST}\n${list}\n${END_ACTIONS_LIST}`)
+  return fs.writeFileSync(readmePath, newReadme)
+}
+
+updateTableOfContents()
