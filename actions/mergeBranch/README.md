@@ -1,21 +1,28 @@
-# Merge a branch
+# `mergeBranch`
 
-`mergeBranch`: Merges a branch into another branch
+Merges a branch into another branch
 
+## Examples
 
+Merge `a-feature-branch` into the `master` branch:
 
 ```yaml
-actions:
-- type: mergeBranch
-  head: a-feature-branch
-- type: mergeBranch
-  head: a-feature-branch
-  base: release-one
+type: mergeBranch
+head: a-feature-branch
+```
+
+Merge `a-feature-branch` into a specific branch:
+
+```yaml
+type: mergeBranch
+head: a-feature-branch
+base: release-one
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Head branch | `head` | Name of the branch to merge from |  | ✔ |
-| Base branch | `base` | Name of the branch to merge into | master |  |
+| Head branch | `head` | The head branch to merge from. | `` | ✔ |
+| Base branch | `base` | The base branch to merge into. This defaults to `master`. | `master` |  |
+

@@ -1,18 +1,25 @@
-# Remove branch protection
+# `removeBranchProtection`
 
-`removeBranchProtection`: Removes the branch protection on a branch in the course repository
+Removes the branch protection on a branch in the course repository
 
+## Examples
 
+Remove branch protection from the `master` branch:
 
 ```yaml
-actions:
-- type: removeBranchProtection
-- type: removeBranchProtection
-  branch: my-protected-branch
+type: removeBranchProtection
+```
+
+Remove branch protection from a specific branch:
+
+```yaml
+type: removeBranchProtection
+branch: my-protected-branch
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Branch | `branch` | The branch name to remove branch protection | `master` |  |
+| Branch | `branch` | The name of the branch to remove protection from. This defaults to `master`. | `master` |  |
+

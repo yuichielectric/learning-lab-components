@@ -1,24 +1,37 @@
-# Respond to an issue or PR
+# `respond`
 
-`respond`: Posts a comment on an issue or pull request
+Posts a comment on an issue or pull request
 
+## Examples
 
+Respond to the issue from the webhook event:
 
 ```yaml
-actions:
-- type: respond
-  with: my-response.md
-- type: respond
-  with: my-response.md
-  issue: Title of an issue to comment in
-- type: respond
-  with: my-response.md
-  issue: 4
+type: respond
+with: my-response.md
+```
+
+Use an issue title:
+
+```yaml
+type: respond
+with: my-response.md
+issue: Title of an issue to comment in
+```
+
+Use the number of an issue:
+
+```yaml
+type: respond
+with: my-response.md
+issue: 4
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Response body | `with` | A markdown filename to use as the comment body |  | ✔ |
-| Issue number or title | `issue` | The number or title of an issue/pull request | Gets the issue number from the webhook payload |  |
+| With | `with` | The name of the response file to use in the generated comment. | `` | ✔ |
+| Issue or pull request | `issue` | The number or title of the issue or pull request to comment on. This will default to the number from the trigger event. | `` |  |
+| Data | `data` | An object of data that will be used in the response template. This can include values from the webhook payload, information about the user, or values returned from previous actions in the same step. | `` |  |
+

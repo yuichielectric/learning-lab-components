@@ -1,20 +1,26 @@
-# Get an Issue
+# `getIssue`
 
-`getIssue`: Gets an Issue from GitHub.
+Gets an Issue from GitHub.
 
+## Examples
 
+Use the title of an issue:
 
 ```yaml
-actions:
-- type: getIssue
-- type: getIssue
-  issue: 1
-- type: getIssue
-  issue: An existing issue
+type: getIssue
+issue: An existing issue
+```
+
+Use an issue number:
+
+```yaml
+type: getIssue
+issue: 1
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Issue | `issue` | Issue title or number. | Gets the issue number from the webhook payload. |  |
+| Issue | `issue` | The number or title of the issue to get. This will default to the issue number from the trigger event. | `` |  |
+
