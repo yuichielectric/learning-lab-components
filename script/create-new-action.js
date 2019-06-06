@@ -47,9 +47,9 @@ async function getActionMetadata () {
  * in by the user from the CLI prompt.
  *
  * @param {PromptAnswers} answers - The CLI prompt answers.
- * @returns {Promise<string>} The "schema.js" contents.
+ * @returns {string} The "schema.js" contents.
  */
-async function createSchema ({ name, description }) {
+function createSchema ({ name, description }) {
   const schemaContents = `const Joi = require('joi')
 const data = require('../../schemas/data')
 
@@ -70,9 +70,9 @@ module.exports = Joi.object({
  * in by the user from the CLI prompt.
  *
  * @param {PromptAnswers} answers - The CLI prompt answers.
- * @returns {Promise<string>} The "index.js" contents.
+ * @returns {string} The "index.js" contents.
  */
-async function createIndex ({ name }) {
+function createIndex ({ name }) {
   const indexContents = `module.exports = async (context, opts) => {
   // TODO: ${name}
 }
@@ -81,14 +81,14 @@ async function createIndex ({ name }) {
 }
 
 /**
- * Creates the contents string for "${actionName}.test.js",
+ * Creates the contents string for "index.test.js",
  * replacing variables in the template with values passed
  * in by the user from the CLI prompt.
  *
  * @param {PromptAnswers} answers - The CLI prompt answers.
- * @returns {Promise<string>} The "${actionName}.test.js" contents.
+ * @returns {string} The "index.test.js" contents.
  */
-async function createTest ({ name }) {
+function createTest ({ name }) {
   const testContents = `const ${name} = require('./')
 const mockContext = require('../../tests/mockContext')
 
@@ -132,15 +132,15 @@ async function createAction () {
   }
 
   // Create the templated content
-  const schema = await createSchema(action)
-  const index = await createIndex(action)
-  const test = await createTest(action)
+  const schema = createSchema(action)
+  const index = createIndex(action)
+  const test = createTest(action)
 
   await Promise.all(
     [
       ['schema.js', schema],
       ['index.js', index],
-      [`${action.name}.test.js`, test]
+      ['index.test.js', test]
     ]
       .map(async ([filename, contents]) => {
         console.info(`Creating "${filename}"...`)
