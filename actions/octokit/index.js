@@ -1,7 +1,7 @@
 const ROUTES = require('@octokit/rest/lib/routes')
 const get = require('get-value')
 
-module.exports = (context, opts) => {
+module.exports = async (context, opts) => {
   const { method, requester, ...data } = opts
 
   const client = opts.requester && opts.requester === 'user' ? context.user.client : context.github
