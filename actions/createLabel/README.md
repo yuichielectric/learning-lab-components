@@ -1,24 +1,31 @@
-# Create a label
+# `createLabel`
 
-`createLabel`: Creates a new label on GitHub.
+Creates a new label on GitHub.
 
+## Examples
 
+Create a new label:
 
 ```yaml
-actions:
-- type: createLabel
-  name: a label
-  color: f87000
-- type: createLabel
-  name: another label
-  color: f87000
-  description: This label is used to label things
+type: createLabel
+name: a label
+color: f87000
+```
+
+A description can also be included:
+
+```yaml
+type: createLabel
+name: another label
+color: f87000
+description: This label is used to label things
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Name | `name` | Name of the label. |  | ✔ |
-| Color | `color` | The hexadecimal color code for the label, without the leading `#`. |  | ✔ |
-| Description | `description` | A short description of the label. |  |  |
+| Name | `name` | The name of the label. |  | ✔ |
+| Color | `color` | The color of the label, as a hex color code. |  | ✔ |
+| Description | `description` | The description of the label. |  |  |
+

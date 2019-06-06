@@ -1,23 +1,35 @@
-# Update branch protection
+# `updateBranchProtection`
 
-`updateBranchProtection`: Updates the branch protection on a branch in the course repository
+Updates the branch protection on a branch in the course repository
 
-## Usage
+## Examples
 
-In addition to `branch`, this action accepts the same options as [`@octokit/rest`'s `updateBranchProtection](https://octokit.github.io/rest.js/#api-Repos-updateBranchProtection).
+Add branch protection to the `master` branch:
 
 ```yaml
-actions:
-- type: updateBranchProtection
-- type: updateBranchProtection
-  branch: my-protected-branch
-- type: updateBranchProtection
-  enforce_admins: false
+type: updateBranchProtection
+```
+
+Set branch protection on `my-protected-branch`:
+
+```yaml
+type: updateBranchProtection
+branch: my-protected-branch
+```
+
+Include specific branch protection settings:
+
+```yaml
+type: updateBranchProtection
+enforce_admins: false
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Branch | `branch` | The branch name to update branch protection | `master` |  |
-| Enforce for Admins | `enforce_admins` | Enforce all configured restrictions for administrators. | true |  |
+| Branch | `branch` | The name of the branch to update protection settings on. This defaults to `master`. | `master` |  |
+| Enforce protection for admins | `enforce_admins` | If enabled, these protection settings will be enforced for repository admins. | `true` |  |
+| Required status checks | `required_status_checks` | A list of status checks that are required before a pull request can be merged into this branch. |  |  |
+| Required pull request reviews | `required_pull_request_reviews` |  |  |  |
+

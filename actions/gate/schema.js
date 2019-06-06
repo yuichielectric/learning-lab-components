@@ -25,3 +25,53 @@ module.exports = gate.append({
     .items(Joi.object().unknown())
     .single()
 })
+  .description('Decides if the next action(s) should be run, and if the step passes or fails.')
+  .example(
+    [
+      {
+        left: 'hello',
+        operator: '===',
+        right: 'hello'
+      },
+      { context: 'Check if the left and right values are equal:' }
+    ],
+    [
+      {
+        left: '%payload.sender.login%',
+        operator: '===',
+        right: '%user.login%'
+      },
+      { context: 'Compare different values from the context of the action:' }
+    ],
+    [
+      {
+        left: '%payload.sender.login%',
+        operator: '===',
+        right: '%user.login%',
+        else: [
+          {
+            type: 'respond',
+            with: 'This returned false!'
+          }
+        ]
+      },
+      { context: 'Use the `else` property to run actions if the condition is falsey:' }
+    ],
+    [
+      {
+        gates: [
+          {
+            left: '%payload.sender.login%',
+            operator: '===',
+            right: '%user.login%'
+          },
+          {
+            left: '%payload.sender.login%',
+            operator: '===',
+            right: 'JasonEtco'
+          }
+        ]
+      },
+      { context: 'Test multiple conditions:' }
+    ]
+  )

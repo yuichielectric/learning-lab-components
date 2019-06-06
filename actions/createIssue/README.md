@@ -1,24 +1,23 @@
-# Create an issue
+# `createIssue`
 
-`createIssue`: Creates a new issue on GitHub.
+Creates a new issue on GitHub.
 
-## Usage
-
-Provide a title and a body to create a new issue on GitHub.
+## Examples
 
 ```yaml
-actions:
-- type: createIssue
-  title: Title of the issue
-  body: issue-body.md
-  comments:
-    - issue-comment.md
+type: createIssue
+title: Title of the issue
+body: issue-body.md
+comments:
+  - issue-comment.md
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Title | `title` | Title of the new issue |  | ✔ |
-| Body | `body` | Body of the new issue |  | ✔ |
-| Comments | `comments` | A list of comments to add to the newly generated issue |  |  |
+| Title | `title` | The title of the issue to be created |  | ✔ |
+| Body | `body` | The body of the issue to be generated - this should be a markdown response file name. |  | ✔ |
+| Comments | `comments` | A list of response files that will be posted to the issue as comments upon creation. |  |  |
+| Data | `data` | An object of data that will be used in the response template. This can include values from the webhook payload, information about the user, or values returned from previous actions in the same step. |  |  |
+

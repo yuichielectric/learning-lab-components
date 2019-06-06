@@ -1,24 +1,31 @@
-# HTML Contains Tag
+# `htmlContainsTag`
 
-`htmlContainsTag`: Checks if the provided HTML string contains a specific HTML tag
+Checks if the provided HTML string contains a specific HTML tag
 
+## Examples
 
+Check if the provided HTML code contains a `<div>` tag:
 
 ```yaml
-actions:
-- type: htmlContainsTag
-  html: <html><div>Hello!</div></html>
-  tag: div
-- type: htmlContainsTag
-  html: <html><img src="example.png" /></html>
-  tag: img
-  attribute: src
+type: htmlContainsTag
+html: <html><div>Hello!</div></html>
+tag: div
+```
+
+Check if the provided HTML code contains an `<img>` tag with an `src` attribute:
+
+```yaml
+type: htmlContainsTag
+html: <html><img src="example.png" /></html>
+tag: img
+attribute: src
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| HTML | `html` | The HTML string to check for a tag |  | ✔ |
-| Tag | `tag` | The HTML tag, like `a` or `div`. |  | ✔ |
-| Attribute | `attribute` | An attribute that the tag must have |  |  |
+| HTML | `html` | An HTML string to parse. This is often used in conjunction with `getFileContents`. |  | ✔ |
+| HTML Tag | `tag` | The HTML tag to look for. |  | ✔ |
+| Attribute | `attribute` | An optional HTML attribute to check for. |  |  |
+

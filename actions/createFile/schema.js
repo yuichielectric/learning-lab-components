@@ -18,3 +18,33 @@ module.exports = Joi.object({
     .description('The name of the file to be created. This can include a path, like `example/file.md`.'),
   data
 })
+  .description('Creates a new file')
+  .example(
+    [
+      {
+        filename: 'README.md',
+        data: {
+          foo: 'bar'
+        }
+      },
+      { context: 'Include some data to be passed as {{ variables }}:' }
+    ],
+    [
+      { filename: 'response.md' },
+      { context: 'Automatically use the repository\'s default branch:' }
+    ],
+    [
+      {
+        filename: 'response.md',
+        branch: 'my-feature-branch'
+      },
+      { context: 'Specify a branch:' }
+    ],
+    [
+      {
+        filename: 'example-codeowners.md',
+        new_name: '.github/CODEOWNERS'
+      },
+      { context: 'Name the file something new in the repository:' }
+    ]
+  )

@@ -9,3 +9,14 @@ module.exports = Joi.object({
     .description('Include sub-paths, not just the top level directory.')
     .default(false)
 })
+  .description('Gets a Git tree at either a given sha or the head of master')
+  .example(
+    [
+      {},
+      { context: 'Get the tree at the current SHA:' }
+    ],
+    [
+      { recursive: true },
+      { context: 'Get a recursive tree, to include files nested in directories:' }
+    ]
+  )

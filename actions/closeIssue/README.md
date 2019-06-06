@@ -1,21 +1,32 @@
-# Close an issue
+# `closeIssue`
 
-`closeIssue`: Closes an issue on GitHub.
+Closes an issue on GitHub.
 
-## Usage
+## Examples
 
-Provide an issue title or number, and the action will close that issue in the repository if it exists, otherwise it will throw an error.
+Use the issue from the webhook payload:
 
 ```yaml
-actions:
-- type: closeIssue
-  issue: Title of an issue
-- type: closeIssue
-  issue: 4
+type: closeIssue
+```
+
+Use the title of an issue:
+
+```yaml
+type: closeIssue
+issue: Title of an issue
+```
+
+Use an issue number:
+
+```yaml
+type: closeIssue
+issue: 4
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Issue | `issue` | Title or number of the issue to close | Gets the issue number from the webhook payload |  |
+| Issue | `issue` | The number or title of the issue to close. |  |  |
+

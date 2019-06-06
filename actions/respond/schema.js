@@ -11,3 +11,24 @@ module.exports = Joi.object({
     .description('The number or title of the issue or pull request to comment on. This will default to the number from the trigger event.'),
   data
 })
+  .description('Posts a comment on an issue or pull request')
+  .example(
+    [
+      { with: 'my-response.md' },
+      { context: 'Respond to the issue from the webhook event:' }
+    ],
+    [
+      {
+        with: 'my-response.md',
+        issue: 'Title of an issue to comment in'
+      },
+      { context: 'Use an issue title:' }
+    ],
+    [
+      {
+        with: 'my-response.md',
+        issue: 4
+      },
+      { context: 'Use the number of an issue:' }
+    ]
+  )

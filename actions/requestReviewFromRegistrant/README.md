@@ -1,20 +1,26 @@
-# Requests that the user review a PR
+# `requestReviewFromRegistrant`
 
-`requestReviewFromRegistrant`: Requests a Pull Request review from the registrant
+Requests a Pull Request review from the registrant
 
+## Examples
 
+Use the title of a pull request:
 
 ```yaml
-actions:
-- type: requestReviewFromRegistrant
-- type: requestReviewFromRegistrant
-  pullRequest: A pull request
-- type: requestReviewFromRegistrant
-  pullRequest: 2
+type: requestReviewFromRegistrant
+pullRequest: A pull request
+```
+
+Use a pull request number:
+
+```yaml
+type: requestReviewFromRegistrant
+pullRequest: 2
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Pull Request | `pullRequest` | Pull Request to request a new review on | Gets the Pull Request number from the webhook payload |  |
+| Pull request | `pullRequest` | The number or title of the pull request to request a review. This will default to the pull request number from the trigger event. |  |  |
+
