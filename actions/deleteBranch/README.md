@@ -1,19 +1,19 @@
-# Delete a branch
+# `deleteBranch`
 
-`deleteBranch`: Deletes the provided branch
+Deletes the provided branch
 
-## Usage
+## Examples
 
-Usually after a pull request is merged, provide the name of the branch to delete it.
+Delete the `example-branch` branch:
 
 ```yaml
-actions:
-- type: deleteBranch
-  branch: example-branch
+type: deleteBranch
+branch: example-branch
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Branch | `branch` | The name of the branch to delete |  | ✔ |
+| Branch | `branch` | The name of the branch to delete.  |  | ✔ |
+

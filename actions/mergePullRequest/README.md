@@ -1,20 +1,26 @@
-# Merge a Pull Request
+# `mergePullRequest`
 
-`mergePullRequest`: Merges a Pull Request on GitHub.
+Merges a Pull Request on GitHub.
 
+## Examples
 
+Use a pull request number:
 
 ```yaml
-actions:
-- type: mergePullRequest
-- type: mergePullRequest
-  pullRequest: 1
-- type: mergePullRequest
-  pullRequest: An existing pull request
+type: mergePullRequest
+pullRequest: 1
+```
+
+Use the title of a pull request:
+
+```yaml
+type: mergePullRequest
+pullRequest: An existing pull request
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Pull Request | `pullRequest` | Title or Number of the new Pull Request | Gets the Pull Request number from the webhook payload |  |
+| Pull request | `pullRequest` | The number or title of the pull request to merge. This will default to the pull request number from the trigger event. |  |  |
+

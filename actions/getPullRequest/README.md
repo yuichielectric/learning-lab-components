@@ -1,21 +1,27 @@
-# Get a Pull Request
+# `getPullRequest`
 
-`getPullRequest`: Gets a Pull Request from GitHub.
+Gets a Pull Request from GitHub.
 
+## Examples
 
+Use a pull request number:
 
 ```yaml
-actions:
-- type: getPullRequest
-- type: getPullRequest
-  pullRequest: 1
-- type: getPullRequest
-  pullRequest: An existing pull request
+type: getPullRequest
+pullRequest: 1
+```
+
+Use the title of a pull request:
+
+```yaml
+type: getPullRequest
+pullRequest: An existing pull request
 ```
 
 ## Options
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Pull Request | `pullRequest` | Pull Request title or number. | Gets the pull request number from the webhook payload. |  |
-| Wait for `mergeable` field | `waitForMergeable` | Only move on when the pull request's mergeable field has been determined. | true |  |
+| Pull request | `pullRequest` | The number or title of the pull request to get. This will default to the pull request number from the trigger event. |  |  |
+| Wait until mergeable | `waitForMergeable` | Only move on to the next action when GitHub has calculated whether or not the pull request is mergeable. |  |  |
+

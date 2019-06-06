@@ -19,3 +19,32 @@ module.exports = Joi.object({
     .description('The title or number of the pull request. If omitted, the comment will be created on the pull request from the trigger event.'),
   data
 })
+  .description('Creates a comment on a pull request on GitHub')
+  .example(
+    [
+      {
+        body: 'suggested-changes.md',
+        file: 'some-file.js',
+        position: 5
+      },
+      { context: 'Create the comment on the pull request from the webhook event:' }
+    ],
+    [
+      {
+        pullRequest: 10,
+        body: 'suggested-changes.md',
+        file: 'some-file.js',
+        position: 5
+      },
+      { context: 'Use the number of a pull request:' }
+    ],
+    [
+      {
+        pullRequest: 'Some pull request',
+        body: 'suggested-changes.md',
+        file: 'some-file.js',
+        position: 5
+      },
+      { context: 'Use a pull request title:' }
+    ]
+  )
