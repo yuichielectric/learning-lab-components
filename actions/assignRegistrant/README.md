@@ -28,5 +28,5 @@ issue: 4
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Issue | `issue` | The number or title of the issue to assign. | `` |  |
+| Issue | `issue` | The number or title of the issue to assign. |  |  |
 

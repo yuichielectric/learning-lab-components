@@ -23,7 +23,7 @@ description: This label is used to label things
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Name | `name` | The name of the label. | `` | ✔ |
-| Color | `color` | The color of the label, as a hex color code. | `` | ✔ |
-| Description | `description` | The description of the label. | `` |  |
+| Name | `name` | The name of the label. |  | ✔ |
+| Color | `color` | The color of the label, as a hex color code. |  | ✔ |
+| Description | `description` | The description of the label. |  |  |
 

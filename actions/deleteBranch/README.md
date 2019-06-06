@@ -15,5 +15,5 @@ branch: example-branch
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Branch | `branch` | The name of the branch to delete.  | `` | ✔ |
+| Branch | `branch` | The name of the branch to delete.  |  | ✔ |
 

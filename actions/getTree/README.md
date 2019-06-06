@@ -21,6 +21,6 @@ recursive: true
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Sha | `sha` | The commit sha to get the tree for. | `` |  |
-| Recursive | `recursive` | Include sub-paths, not just the top level directory. | `` |  |
+| Sha | `sha` | The commit sha to get the tree for. |  |  |
+| Recursive | `recursive` | Include sub-paths, not just the top level directory. |  |  |
 

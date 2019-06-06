@@ -16,5 +16,5 @@ title: A new issue
 
 | Title | Property | Description | Default | Required |
 | :---- | :--- | :---------- | :------ | :------- |
-| Method | `method` | The method on the Octokit SDK to use. This should be a string like `issues.create`. | `` | ✔ |
+| Method | `method` | The method on the Octokit SDK to use. This should be a string like `issues.create`. |  | ✔ |
 
