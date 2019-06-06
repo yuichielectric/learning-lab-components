@@ -1,6 +1,6 @@
 const nock = require('nock')
 const { GitHubAPI } = require('probot/lib/github')
-const deleteBranch = require('.')
+const deleteBranch = require('./')
 const mockContext = require('../../tests/mockContext')
 
 describe('deleteBranch', () => {
