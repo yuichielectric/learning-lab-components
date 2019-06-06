@@ -65,6 +65,7 @@ function generate (actionKey) {
   })
 }
 
+// Loop over each action to generate it's README.md
 for (const actionKey in actions) {
   const pathToDoc = path.join(__dirname, '..', 'actions', actionKey, 'README.md')
   const body = generate(actionKey)
