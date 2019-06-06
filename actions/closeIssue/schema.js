@@ -12,15 +12,11 @@ module.exports = Joi.object({
       { context: 'Use the issue from the webhook payload:' }
     ],
     [
-      {
-        issue: 'Title of an issue'
-      },
+      { issue: 'Title of an issue' },
       { context: 'Use the title of an issue:' }
     ],
     [
-      {
-        issue: 4
-      },
+      { issue: 4 },
       { context: 'Use an issue number:' }
     ]
   )

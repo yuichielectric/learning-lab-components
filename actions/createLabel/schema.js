@@ -20,7 +20,8 @@ module.exports = Joi.object({
       {
         name: 'a label',
         color: 'f87000'
-      }
+      },
+      { context: 'Create a new label:' }
     ],
     [
       {

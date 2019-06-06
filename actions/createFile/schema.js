@@ -30,9 +30,7 @@ module.exports = Joi.object({
       { context: 'Include some data to be passed as {{ variables }}:' }
     ],
     [
-      {
-        filename: 'response.md'
-      },
+      { filename: 'response.md' },
       { context: 'Automatically use the repository\'s default branch:' }
     ],
     [

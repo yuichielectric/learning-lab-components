@@ -4,6 +4,8 @@ Creates a new label on GitHub.
 
 ## Examples
 
+Create a new label:
+
 ```yaml
 type: createLabel
 name: a label
