@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `requestReviewFromRegistrant`
 
 Requests a Pull Request review from the registrant

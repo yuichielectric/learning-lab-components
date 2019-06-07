@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `octokit`
 
 Calls a method in the Octokit library. [https://octokit.github.io/rest.js/](https://octokit.github.io/rest.js/)
