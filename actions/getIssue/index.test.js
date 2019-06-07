@@ -1,4 +1,4 @@
-const getIssue = require('.')
+const getIssue = require('./')
 const mockContext = require('../../tests/mockContext')
 
 describe('getIssue', () => {

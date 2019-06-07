@@ -1,4 +1,4 @@
-const getPullRequest = require('.')
+const getPullRequest = require('./')
 const mockContext = require('../../tests/mockContext')
 
 describe('getPullRequest', () => {

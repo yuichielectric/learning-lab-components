@@ -1,4 +1,4 @@
-const mergeBranch = require('.')
+const mergeBranch = require('./')
 const mockContext = require('../../tests/mockContext')
 
 describe('mergeBranch', () => {
