@@ -42,7 +42,7 @@
   },
   "scripts": {
     "action:init": "node script/create-new-action.js",
-    "doc": "node script/generate-action-docs-from-config.js",
+    "doc": "node script/generate-action-docs-from-schemas.js",
     "test": "standard && jest --coverage"
   },
   "dependencies": {

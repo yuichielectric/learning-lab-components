@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const { spawnSync } = require('child_process')
 const { promisify } = require('util')
 const { prompt } = require('enquirer')
 
@@ -147,6 +148,23 @@ async function createAction () {
         await writeFile(path.join(baseDir, filename), contents)
       })
   )
+
+  console.info('Creating "README.md"...')
+  const { status, signal, error } =
+    spawnSync(
+      process.execPath,
+      [
+        path.join(__dirname, 'generate-action-docs-from-schemas.js')
+      ]
+    )
+
+  if (status !== 0) {
+    console.error(`Failed to generate README.md!
+Exited with status ${status}, signal ${signal}, error:
+${error.stack}`
+    )
+    process.exit(1)
+  }
 
   console.info(`
 ------------------------------------
