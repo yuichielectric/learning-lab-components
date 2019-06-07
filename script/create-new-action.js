@@ -57,9 +57,9 @@ module.exports = Joi.object({
   data
 })
   .description('${description.replace(/'/g, '\\\'')}')
-  .example([
-
-  ])
+  .example(
+    []
+  )
 `
   return schemaContents
 }
