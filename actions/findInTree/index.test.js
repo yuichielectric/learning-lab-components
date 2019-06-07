@@ -1,4 +1,4 @@
-const findInTree = require('.')
+const findInTree = require('./')
 
 describe('findInTree', () => {
   let tree, context
