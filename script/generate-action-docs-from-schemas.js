@@ -3,7 +3,13 @@ const fs = require('fs')
 const path = require('path')
 const jsYaml = require('js-yaml')
 
-const template = ({ key, description, rows, examples }) => `# \`${key}\`
+const template = ({ key, description, rows, examples }) => `<!--
+  /!\\ WARNING /!\\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
+# \`${key}\`
 
 ${description}
 

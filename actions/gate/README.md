@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `gate`
 
 Decides if the next action(s) should be run, and if the step passes or fails.

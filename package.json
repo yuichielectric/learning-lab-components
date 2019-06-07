@@ -41,7 +41,8 @@
     "npm": "6.x.x"
   },
   "scripts": {
-    "doc": "node script/generate-action-docs-from-config.js",
+    "action:init": "node script/create-new-action.js",
+    "doc": "node script/generate-action-docs-from-schemas.js",
     "test": "standard && jest --coverage"
   },
   "dependencies": {
@@ -51,6 +52,7 @@
     "joi": "^14.3.1"
   },
   "devDependencies": {
+    "enquirer": "^2.3.0",
     "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
     "lodash.isplainobject": "^4.0.6",

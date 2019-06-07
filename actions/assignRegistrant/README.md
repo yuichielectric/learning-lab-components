@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `assignRegistrant`
 
 Assigns the registered user to an issue or pull request

@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `updateBranchProtection`
 
 Updates the branch protection on a branch in the course repository

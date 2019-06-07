@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `createStatus`
 
 Creates a status on a commit or pull request

@@ -1,3 +1,9 @@
+<!--
+  /!\ WARNING /!\
+  This file's content is auto-generated, do NOT edit!
+  All changes will be undone.
+-->
+
 # `createReview`
 
 Creates a Pull Request review on GitHub
