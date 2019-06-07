@@ -67,23 +67,24 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
       let schema
 
       beforeAll(async () => {
-        schema = action.schema
+        // Get a plain object rendering of the schema to avoid relying on Joi internals
+        schema = action.schema.describe()
       })
 
       it('has a description', async () => {
-        expect(typeof schema._description).toBe('string')
-        expect(schema._description.length).toBeGreaterThan(0)
+        expect(typeof schema.description).toBe('string')
+        expect(schema.description.length).toBeGreaterThan(0)
       })
 
       it('has at least one example', async () => {
-        expect(Array.isArray(schema._examples)).toBe(true)
-        expect(schema._examples.length).toBeGreaterThan(0)
+        expect(Array.isArray(schema.examples)).toBe(true)
+        expect(schema.examples.length).toBeGreaterThan(0)
       })
 
       it('has examples which all include a context if there is more than one example', async () => {
-        const hasMoreThanOneExample = schema._examples.length > 1
+        const hasMoreThanOneExample = schema.examples.length > 1
 
-        for (let example of schema._examples) {
+        for (let example of schema.examples) {
           expect(isPlainObject(example)).toBe(true)
           expect(example).toHaveProperty('value')
           expect(isPlainObject(example.value)).toBe(true)
