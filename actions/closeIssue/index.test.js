@@ -1,7 +1,7 @@
-const assignRegistrant = require('.')
+const closeIssue = require('./')
 const mockContext = require('../../tests/mockContext')
 
-describe('assignRegistrant', () => {
+describe('closeIssue', () => {
   let context
 
   beforeEach(() => {
@@ -10,7 +10,9 @@ describe('assignRegistrant', () => {
         number: 1
       }
     }, {
-      request: jest.fn(),
+      issues: {
+        update: jest.fn()
+      },
       search: {
         issues: jest.fn(() => Promise.resolve({
           data: {
@@ -22,26 +24,26 @@ describe('assignRegistrant', () => {
   })
 
   it('closes the issue from the webhook payload', async () => {
-    await assignRegistrant(context, {})
-    expect(context.github.request).toHaveBeenCalled()
-    expect(context.github.request.mock.calls).toMatchSnapshot()
+    await closeIssue(context, {})
+    expect(context.github.issues.update).toHaveBeenCalled()
+    expect(context.github.issues.update.mock.calls).toMatchSnapshot()
   })
 
   it('closes an issue with an issue string', async () => {
-    await assignRegistrant(context, { issue: 'My issue' })
-    expect(context.github.request).toHaveBeenCalled()
-    expect(context.github.request.mock.calls).toMatchSnapshot()
+    await closeIssue(context, { issue: 'My issue' })
+    expect(context.github.issues.update).toHaveBeenCalled()
+    expect(context.github.issues.update.mock.calls).toMatchSnapshot()
   })
 
   it('closes an issue with an issue number', async () => {
-    await assignRegistrant(context, { issue: 2 })
-    expect(context.github.request).toHaveBeenCalled()
-    expect(context.github.request.mock.calls).toMatchSnapshot()
+    await closeIssue(context, { issue: 2 })
+    expect(context.github.issues.update).toHaveBeenCalled()
+    expect(context.github.issues.update.mock.calls).toMatchSnapshot()
   })
 
   it('throws an error if the issue cannot be found', async () => {
     try {
-      await assignRegistrant(context, { issue: 'My issue' })
+      await closeIssue(context, { issue: 'My issue' })
     } catch (err) {
       expect(err).toMatchSnapshot()
     }

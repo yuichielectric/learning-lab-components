@@ -1,4 +1,4 @@
-const removeBranchProtection = require('.')
+const removeBranchProtection = require('./')
 const mockContext = require('../../tests/mockContext')
 
 describe('removeBranchProtection', () => {

@@ -1,4 +1,4 @@
-const createReview = require('.')
+const createReview = require('./')
 const mockContext = require('../../tests/mockContext')
 
 describe('createReview', () => {
