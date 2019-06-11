@@ -32,11 +32,7 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
   })
 
   describe.each(actionNames)('the action "%s"', (actionName) => {
-    let action
-
-    beforeAll(async () => {
-      action = actions[actionName]
-    })
+    const action = actions[actionName]
 
     it('has the minimum set of required files', async () => {
       const actionDirFiles =
@@ -64,12 +60,8 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
     })
 
     describe('has a schema which', () => {
-      let schema
-
-      beforeAll(async () => {
-        // Get a plain object rendering of the schema to avoid relying on Joi internals
-        schema = action.schema.describe()
-      })
+      // Get a plain object rendering of the schema to avoid relying on Joi internals
+      const schema = action.schema.describe()
 
       it('has a description', () => {
         expect(typeof schema.description).toBe('string')
