@@ -51,13 +51,13 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
       expect(actionDirFiles).toContain('README.md')
     })
 
-    it('is a function expecting 2-3 arguments', async () => {
+    it('is a function expecting 2-3 arguments', () => {
       expect(typeof action).toBe('function')
       expect(action.length).toBeGreaterThanOrEqual(2)
       expect(action.length).toBeLessThanOrEqual(3)
     })
 
-    it('has a "schema" property', async () => {
+    it('has a "schema" property', () => {
       expect(action).toHaveProperty('schema')
       expect(action.schema).toBeTruthy()
       expect(action.schema.isJoi).toBe(true)
@@ -71,17 +71,17 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
         schema = action.schema.describe()
       })
 
-      it('has a description', async () => {
+      it('has a description', () => {
         expect(typeof schema.description).toBe('string')
         expect(schema.description.length).toBeGreaterThan(0)
       })
 
-      it('has at least one example', async () => {
+      it('has at least one example', () => {
         expect(Array.isArray(schema.examples)).toBe(true)
         expect(schema.examples.length).toBeGreaterThan(0)
       })
 
-      it('has examples which all include a context if there is more than one example', async () => {
+      it('has examples which all include a context if there is more than one example', () => {
         const hasMoreThanOneExample = schema.examples.length > 1
 
         for (let example of schema.examples) {
