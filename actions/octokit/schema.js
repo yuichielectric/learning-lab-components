@@ -10,9 +10,9 @@ module.exports = Joi.object({
   .example(
     [
       {
-        method: 'issues.create',
-        title: 'A new issue'
+        method: 'repos.update',
+        description: 'Description of the repository'
       },
-      { context: 'Use the `issues.create` method to create a new issue:' }
+      { context: 'Use the `repos.update` method to change the repository\'s description:' }
     ]
   )
