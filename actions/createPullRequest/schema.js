@@ -7,7 +7,7 @@ module.exports = Joi.object({
     .description('The title of the pull request.')
     .required(),
   body: Joi.string()
-    .meta({ label: 'Body' })
+    .meta({ label: 'Body', isResponse: true })
     .description('The body of the pull request.')
     .required(),
   head: Joi.string()
