@@ -14,10 +14,10 @@ module.exports = Joi.object({
     .meta({ label: 'State' })
     .description('The state of the status to create.')
     .required(),
-  error: state,
-  pending: state,
-  failure: state,
-  success: state,
+  error: state.meta({ label: 'Error' }),
+  pending: state.meta({ label: 'Pending' }),
+  failure: state.meta({ label: 'Failure' }),
+  success: state.meta({ label: 'Success' }),
   sha: Joi.string()
     .meta({ label: 'Sha' })
     .description('The commit sha to create the status for. This will default to the head commit from the webhook payload if available.'),

@@ -3,7 +3,7 @@ const data = require('../../schemas/data')
 
 module.exports = Joi.object({
   body: Joi.string()
-    .meta({ label: 'Body' })
+    .meta({ label: 'Body', isResponse: true })
     .description('The body of the pull request comment.')
     .required(),
   file: Joi.string()
