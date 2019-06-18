@@ -28,8 +28,19 @@ ${rows}
 function mapChildrenToRows (children) {
   return Object.keys(children).reduce((prev, key) => {
     const opt = children[key]
-    return prev +
-    `| ${opt.meta && opt.meta[0] && opt.meta[0].label} | \`${key}\` | ${opt.description || ''} | ${(opt.flags && opt.flags.default) ? `\`${opt.flags.default}\`` : ''} | ${opt.flags && opt.flags.presence === 'required' ? '✔' : ''} |\n`
+    const cells = [
+      // Label
+      opt.meta && opt.meta[0] && opt.meta[0].label,
+      // Property
+      `\`${key}\``,
+      // Description
+      opt.description || '',
+      // Default value
+      opt.flags && opt.flags.default ? `\`${opt.flags.default}\`` : '',
+      // Required
+      opt.flags && opt.flags.presence === 'required' ? '✔' : ''
+    ]
+    return prev + `| ${cells.join(' | ')} |\n`
   }, '')
 }
 
