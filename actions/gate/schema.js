@@ -15,7 +15,10 @@ const gate = Joi.object({
 })
 
 module.exports = gate.append({
-  gates: Joi.array().items(gate),
+  gates: Joi.array()
+    .meta({ label: 'Multiple gates' })
+    .description('Test against multiple conditions.')
+    .items(gate),
   every: Joi.boolean()
     .meta({ label: 'Require every gate to pass' })
     .default(false),

@@ -3,7 +3,7 @@ const data = require('../../schemas/data')
 
 module.exports = Joi.object({
   body: Joi.string()
-    .meta({ label: 'Body' })
+    .meta({ label: 'Body', isResponse: true })
     .description('A response file for the body of the review.')
     .required(),
   event: Joi.string()

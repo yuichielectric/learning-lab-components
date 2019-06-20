@@ -10,12 +10,12 @@ Calls a method in the Octokit library. [https://octokit.github.io/rest.js/](http
 
 ## Examples
 
-Use the `issues.create` method to create a new issue:
+Use the `repos.update` method to change the repository's description:
 
 ```yaml
 type: octokit
-method: issues.create
-title: A new issue
+method: repos.update
+description: Description of the repository
 ```
 
 ## Options

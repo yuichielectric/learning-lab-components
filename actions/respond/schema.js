@@ -3,7 +3,7 @@ const data = require('../../schemas/data')
 
 module.exports = Joi.object({
   with: Joi.string()
-    .meta({ label: 'With' })
+    .meta({ label: 'With', isResponse: true })
     .description('The name of the response file to use in the generated comment.')
     .required(),
   issue: Joi.alternatives(Joi.number(), Joi.string())
