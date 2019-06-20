@@ -40,7 +40,6 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
           .filter(ent => ent.isFile())
           .map(ent => ent.name)
 
-      expect(actionDirFiles).toContain('config.yml')
       expect(actionDirFiles).toContain('schema.js')
       expect(actionDirFiles).toContain('index.js')
       expect(actionDirFiles).toContain('index.test.js')
