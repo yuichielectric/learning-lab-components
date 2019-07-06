@@ -1,4 +1,4 @@
-## Contributing
+# Contributing
 
 [fork]: https://github.com/github/learning-lab-components/fork
 [pr]: https://github.com/github/learning-lab-components/compare
@@ -28,8 +28,34 @@ Here are a few things you can do that will increase the likelihood of your pull 
 - Keep your change as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
-## Resources
+### Resources
 
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
 - [Using Pull Requests](https://help.github.com/articles/about-pull-requests/)
 - [GitHub Help](https://help.github.com)
+
+## Releasing a new version
+
+Project administrators have permissions to publish new releases to the GitHub Package Registry by following these steps from an up-to-date `master` branch:
+
+1. Bump the package version and create a commit by using one of the appropriate NPM commands:
+    - `npm version major`
+    - `npm version minor`
+    - `npm version patch`
+2. Push that commit to the remote repository with `git push`
+3. [Authenticate your NPM client to the GitHub Package Registry](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry#authenticating-to-github-package-registry)
+4. Publish the package to the GitHub Package Registry by executing `npm publish`
+
+### Consuming a new version
+
+Once a new version of this module has been released as a package in the GitHub Package Registry, it also needs to be consumed by GitHub Learning Lab for the changes to take effect.
+
+In the GitHub Learning Lab codebase, a member of the GitHub Learning Lab team should:
+
+1. Create a new branch from `master`
+2. Manually update the `"package.json"` file's `dependencies` entry for `@github/learning-lab-components` to reference the latest package version
+3. Install that version by executing `npm install`
+4. Verify that all tests still pass by executing `npm test`
+5. Test the specific changes made to the components since the previous version was consumed
+6. Assuming all is well, commit all changes and push them to the remote repository
+7. Create a new Pull Request for team approval
