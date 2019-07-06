@@ -20,7 +20,7 @@ By making these bot actions available as an open source library, we hope to enco
 
 <br />
 
-# Install
+## Install
 
 As this module is primarily intended for use by GitHub Learning Lab within a Node.js environment, the need to install it is not expected to be common.
 
@@ -30,7 +30,7 @@ However, if you feel that need but you are new to using the GitHub Package Regis
 npm install @github/learning-lab-components
 ```
 
-# License
+## License
 
 [MIT License](LICENSE.md) (c) 2019 GitHub, Inc.
 
