@@ -2,7 +2,7 @@
 
 Open sourced components from [GitHub Learning Lab](https://lab.github.com/)
 
-Namely, this module contains all of the JavaScript-based bot actions that Learning Lab course authors may utilize when writing their course steps.
+This library contains all of the JavaScript-based bot actions that Learning Lab course authors may utilize when writing their course steps. Check out [the docs on actions](https://lab.github.com/docs/using-actions) for more information about how they're used.
 
 The bot actions from the [latest release of this repository on the GitHub Package Registry](https://github.com/github/learning-lab-components/packages) are used in production by GitHub Learning Lab.
 
