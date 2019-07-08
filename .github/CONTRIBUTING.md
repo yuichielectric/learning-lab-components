@@ -53,9 +53,8 @@ Once a new version of this module has been released as a package in the GitHub P
 In the GitHub Learning Lab codebase, a member of the GitHub Learning Lab team should:
 
 1. Create a new branch from `master`
-2. Manually update the `"package.json"` file's `dependencies` entry for `@github/learning-lab-components` to reference the latest package version
-3. Install that version by executing `npm install`
-4. Verify that all tests still pass by executing `npm test`
-5. Test the specific changes made to the components since the previous version was consumed
-6. Assuming all is well, commit all changes and push them to the remote repository
-7. Create a new Pull Request for team approval
+2. Install the latest version by executing `npm install @github/learning-lab-components@latest`
+3. Verify that all tests still pass by executing `npm test`
+4. Test the specific changes made to the components since the previous version was consumed
+5. Assuming all is well, commit all changes and push them to the remote repository
+6. Create a new Pull Request for team approval
