@@ -1,6 +1,7 @@
-# learning-lab-components
+<h3 align="center">Learning Lab Components</h3>
+<p align="center">Open sourced components from <a href="https://lab.github.com/">GitHub Learning Lab</a></p>
 
-Open sourced components from [GitHub Learning Lab](https://lab.github.com/)
+## Overview
 
 This library contains all of the JavaScript-based bot actions that Learning Lab course authors may utilize when writing their course steps. Check out [the docs on actions](https://lab.github.com/docs/using-actions) for more information about how they're used.
 
