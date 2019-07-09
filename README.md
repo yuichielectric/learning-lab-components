@@ -1,5 +1,6 @@
 <h3 align="center">Learning Lab Components</h3>
 <p align="center">Open sourced components from <a href="https://lab.github.com/">GitHub Learning Lab</a></p>
+<p align="center"><a href="https://github.com/github/learning-lab-components/actions"><img src="https://action-badges.now.sh/github/learning-lab-components" alt="Build Status" /></a></p>
 
 ## Overview
 
