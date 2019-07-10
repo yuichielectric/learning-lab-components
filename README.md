@@ -1,5 +1,6 @@
 <h3 align="center">Learning Lab Components</h3>
 <p align="center">Open sourced components from <a href="https://lab.github.com/">GitHub Learning Lab</a></p>
+<p align="center"><a href="https://codecov.io/gh/github/learning-lab-components"><img src="https://badgen.now.sh/codecov/c/github/github/learning-lab-components" alt="Code Coverage" /></a></p>
 
 ## Overview
 
