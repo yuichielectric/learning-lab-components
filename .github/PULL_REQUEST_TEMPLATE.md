@@ -15,4 +15,4 @@ Share artifacts of the changes, be they code snippets, commentary, GIFs, or scre
 If adding or updating an action, please verify that you have:
 - [ ] Added or updated tests, and verified they pass by executing `npm test`
 - [ ] Added or updated code comments, if applicable
-- [ ] Generated up-to-date documentation if a schema was added or updated by executing `npm run doc`
+- [ ] Generated up-to-date documentation by executing `npm run doc`, if a schema was added or updated
