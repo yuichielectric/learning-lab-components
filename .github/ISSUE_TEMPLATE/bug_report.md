@@ -8,7 +8,7 @@ labels: 'bug'
 ## Bug Report
 
 **Current behavior**
-A clear and concise description of the behavior (with optional code snippets).
+A clear and concise description of what the bug is (with optional code snippets).
 
 <!--
 
@@ -30,8 +30,15 @@ Faulty JavaScript?
 
 -->
 
+**Reproduction**
+Steps to reproduce the behavior in GitHub Learning Lab:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
 **Expected behavior**
-A clear and concise description of what you want to happen (with optional code snippets).
+A clear and concise description of what you expected to happen (with optional code snippets).
 
 **Possible solution**
 <!--- Only if you have suggestions on a fix for the bug -->
