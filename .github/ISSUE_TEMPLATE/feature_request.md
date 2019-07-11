@@ -8,7 +8,7 @@ labels: 'enhancement'
 ## Feature Request
 
 **Describe the problem/friction you are trying to solve**
-A clear and concise description of what the problem is, e.g. I have an issue when...
+A clear and concise description of what the problem is, e.g. I am always frustrated when...
 
 **Describe your ideal solution**
 A clear and concise description of what you want to happen, ideally including code snippets to demonstrate usage examples.
