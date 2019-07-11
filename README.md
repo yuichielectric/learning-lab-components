@@ -14,9 +14,7 @@ By making these bot actions available as an open source library, we hope to work
 
 <br />
 
-| Components | | GitHub Learning Lab |
-|:---:|:---:|:---:|
-| <img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /> **+** <img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /><br /><img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /> <img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /> | &rarr;<br />&rarr;<br />&rarr;<br />&rarr; | <img alt="GitHub Learning Lab's mascot" src="https://user-images.githubusercontent.com/417751/60743323-a8c45400-9f36-11e9-94da-2952bd4bd198.png" /> |
+![learning-lab-components](https://user-images.githubusercontent.com/6351798/61025968-c733b080-a377-11e9-954a-e6ab77411748.png)
 
 <br />
 
