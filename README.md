@@ -14,7 +14,7 @@ By making these bot actions available as an open source library, we hope to work
 
 <br />
 
-![learning-lab-components](https://user-images.githubusercontent.com/6351798/61025968-c733b080-a377-11e9-954a-e6ab77411748.png)
+![learning-lab-components](https://user-images.githubusercontent.com/417751/61059163-2f0cea00-a3be-11e9-8e70-c87d9ba54f92.png)
 
 <br />
 
