@@ -12,8 +12,6 @@ By making these bot actions available as an open source library, we hope to work
  - suggesting enhancements for existing bot actions
  - requesting or [creating new bot actions](actions/README.md#adding-a-new-action)
 
-<br />
-
 ![learning-lab-components](https://user-images.githubusercontent.com/417751/61059163-2f0cea00-a3be-11e9-8e70-c87d9ba54f92.png)
 
 <br />
