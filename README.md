@@ -14,8 +14,6 @@ By making these bot actions available as an open source library, we hope to work
 
 ![learning-lab-components](https://user-images.githubusercontent.com/417751/61059163-2f0cea00-a3be-11e9-8e70-c87d9ba54f92.png)
 
-<br />
-
 ## License
 
 [MIT License](LICENSE.md) (c) 2019 GitHub, Inc.
