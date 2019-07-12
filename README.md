@@ -12,13 +12,7 @@ By making these bot actions available as an open source library, we hope to work
  - suggesting enhancements for existing bot actions
  - requesting or [creating new bot actions](actions/README.md#adding-a-new-action)
 
-<br />
-
-| Components | | GitHub Learning Lab |
-|:---:|:---:|:---:|
-| <img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /> **+** <img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /><br /><img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /> <img alt="GitHub Learning Lab components" width="120" src="https://user-images.githubusercontent.com/417751/60743664-36547380-9f38-11e9-9b1b-e1f77a5049ea.png" /> | &rarr;<br />&rarr;<br />&rarr;<br />&rarr; | <img alt="GitHub Learning Lab's mascot" src="https://user-images.githubusercontent.com/417751/60743323-a8c45400-9f36-11e9-94da-2952bd4bd198.png" /> |
-
-<br />
+![learning-lab-components](https://user-images.githubusercontent.com/417751/61059163-2f0cea00-a3be-11e9-8e70-c87d9ba54f92.png)
 
 ## License
 
