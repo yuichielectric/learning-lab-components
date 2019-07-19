@@ -29,4 +29,10 @@ describe('getFileContents', () => {
     expect(context.github.gitdata.getTree.mock.calls).toMatchSnapshot()
     expect(ret).toMatchSnapshot()
   })
+
+  it('returns false if the content does not exist', async () => {
+    context.github.gitdata.getBlob.mockImplementationOnce(() => { throw new Error(404) })
+    const ret = await getFileContents(context, { filename: 'filename' })
+    expect(ret).toBe(false)
+  })
 })
