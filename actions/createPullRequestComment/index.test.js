@@ -39,6 +39,10 @@ describe('createPullRequestComment', () => {
   })
 
   it('creates a PR comment on the specified PR number', async () => {
+    nocked
+      .get('/repos/JasonEtco/example/pulls/4')
+      .reply(200, { head: { sha: 'the1best2sha' } })
+
     const { data } = await createPullRequestComment(context, {
       body: 'example.md',
       pullRequest: 4,
@@ -51,7 +55,7 @@ describe('createPullRequestComment', () => {
       body: 'example.md',
       path: 'some-file.js',
       position: 1,
-      commit_id: '123abc'
+      commit_id: 'the1best2sha'
     })
     expect(nocked.isDone()).toBe(true)
   })
