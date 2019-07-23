@@ -1,5 +1,6 @@
 <h3 align="center">Learning Lab Components</h3>
 <p align="center">Open sourced components from <a href="https://lab.github.com/">GitHub Learning Lab</a></p>
+<p align="center"><a href="https://github.com/github/learning-lab-components/packages/11396"><img src="https://img.shields.io/github/release/github/learning-lab-components.svg?label=GPR&logo=github" alt="GitHub Package Registry version" /></a></p>
 
 ## Overview
 
