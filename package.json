@@ -48,6 +48,7 @@
   "dependencies": {
     "@octokit/rest": "^15.18.1",
     "get-value": "^3.0.1",
+    "has": "^1.0.3",
     "htmlparser2": "^3.10.1",
     "joi": "^14.3.1"
   },

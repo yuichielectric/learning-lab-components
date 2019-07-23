@@ -1,4 +1,5 @@
 const get = require('get-value')
+const has = require('has')
 const { Context: ProbotContext } = require('probot/lib/context')
 
 // IMPORTANT:
@@ -69,7 +70,7 @@ class Context extends ProbotContext {
     }
 
     // Always look through to the `data` object
-    if (o.hasOwnProperty('data')) {
+    if (has(o, 'data')) {
       o.data = this.getValuesFromContext(o.data)
     }
 

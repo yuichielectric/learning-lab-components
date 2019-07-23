@@ -1,5 +1,6 @@
 const ROUTES = require('@octokit/rest/lib/routes')
 const get = require('get-value')
+const has = require('has')
 
 module.exports = async (context, opts) => {
   const { method, requester, ...data } = opts
@@ -17,7 +18,7 @@ module.exports = async (context, opts) => {
   }
 
   const required = Object.keys(route.params).filter(p => route.params[p].required)
-  const requiredButMissingParams = required.filter(p => !data.hasOwnProperty(p))
+  const requiredButMissingParams = required.filter(p => !has(data, p))
 
   if (requiredButMissingParams.length > 0) {
     throw new Error(`Octokit method \`${method}\` requires the following parameters: ${requiredButMissingParams.join(', ')}`)

@@ -1,8 +1,10 @@
+const has = require('has')
+
 module.exports = async (context, opts) => {
   let sha
 
-  if (!opts.hasOwnProperty('sha')) {
-    if (context.payload.hasOwnProperty('pull_request')) {
+  if (!has(opts, 'sha')) {
+    if (has(context.payload, 'pull_request')) {
       sha = context.payload.pull_request.head.sha
     } else if (context.payload.head_commit) {
       sha = context.payload.head_commit.id

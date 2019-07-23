@@ -1,3 +1,4 @@
+const has = require('has')
 const { Parser } = require('htmlparser2')
 
 /**
@@ -16,7 +17,7 @@ module.exports = async (context, opts) => {
       if (name === opts.tag) {
         hasOpen = true
         if (opts.attribute) {
-          hasAttribute = attribs.hasOwnProperty(opts.attribute)
+          hasAttribute = has(attribs, opts.attribute)
         }
       }
     },

@@ -1,9 +1,10 @@
+const has = require('has')
 const operations = require('./operations')
 
 function evaluate (options) {
   const { left, operator, right } = options
-  if (operator && options.hasOwnProperty('right')) {
-    if (!operations.hasOwnProperty(operator)) throw new Error(`Operation \`${operator}\` does not exist.`)
+  if (operator && has(options, 'right')) {
+    if (!has(operations, operator)) throw new Error(`Operation \`${operator}\` does not exist.`)
     return operations[operator](left, right)
   } else {
     return Boolean(left)
@@ -12,7 +13,7 @@ function evaluate (options) {
 
 module.exports = async (context, opts, { stack = [] } = {}) => {
   let success
-  if (opts.hasOwnProperty('gates')) {
+  if (has(opts, 'gates')) {
     // Either Array.some or Array.every
     const method = opts.every ? 'every' : 'some'
     success = opts.gates[method](gate => {
@@ -23,7 +24,7 @@ module.exports = async (context, opts, { stack = [] } = {}) => {
     success = evaluate(opts)
   }
 
-  if (opts.hasOwnProperty('else') && success === false) {
+  if (has(opts, 'else') && success === false) {
     if (stack.length === 0) {
       stack.push('gate')
     }

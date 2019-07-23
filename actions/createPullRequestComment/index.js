@@ -1,11 +1,8 @@
-// - type: createPullRequestComment
-//   file: game.js
-//   body: suggested-change.md
-//   position: 5
+const has = require('has')
 
 module.exports = async (context, opts) => {
   let number, sha
-  if (opts.hasOwnProperty('pullRequest')) {
+  if (has(opts, 'pullRequest')) {
     if (typeof opts.pullRequest === 'string') {
       const { owner, repo } = context.repo()
       const pullRequests = await context.github.search.issues({
