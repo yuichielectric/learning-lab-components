@@ -154,7 +154,7 @@ async function createAction () {
     spawnSync(
       process.execPath,
       [
-        path.join(__dirname, 'generate-action-docs-from-schemas.js')
+        path.join(__dirname, 'generate-action-docs.js')
       ]
     )
 
