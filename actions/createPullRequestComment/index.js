@@ -16,6 +16,9 @@ module.exports = async (context, opts) => {
       sha = pullRequest.head.sha
     } else if (typeof opts.pullRequest === 'number') {
       number = opts.pullRequest
+      // Get the sha of the head of the PR
+      const pr = await context.github.pullRequests.get(context.repo({ number }))
+      sha = pr.data.head.sha
     }
   } else {
     number = (context.payload.pull_request || context.payload).number
