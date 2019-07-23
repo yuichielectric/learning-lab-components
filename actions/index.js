@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-let actionNames =
+const actionNames =
   fs.readdirSync(__dirname, { withFileTypes: true })
     .filter(ent => ent.isDirectory())
     .map(ent => ent.name)
@@ -8,7 +8,7 @@ let actionNames =
 
 const actions = {}
 
-for (let actionName of actionNames) {
+for (const actionName of actionNames) {
   actions[actionName] = require(`./${actionName}`)
   actions[actionName].schema = require(`./${actionName}/schema`)
 }

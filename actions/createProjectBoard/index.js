@@ -1,3 +1,5 @@
+const has = require('has')
+
 module.exports = async (context, opts) => {
   // Create a new project board
   const newProjectBoard = await context.github.projects.createRepoProject(context.repo({
@@ -6,7 +8,7 @@ module.exports = async (context, opts) => {
   }))
 
   // Bootstrap it with the appropriate columns
-  if (opts.hasOwnProperty('columns') && Array.isArray(opts.columns)) {
+  if (has(opts, 'columns') && Array.isArray(opts.columns)) {
     for (const column of opts.columns) {
       await context.github.projects.createProjectColumn({
         project_id: newProjectBoard.data.id,

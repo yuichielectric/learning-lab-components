@@ -1,3 +1,5 @@
+const has = require('has')
+
 module.exports = async (context, opts) => {
   const pr = await context.github.pullRequests.create(context.repo({
     title: opts.title,
@@ -6,7 +8,7 @@ module.exports = async (context, opts) => {
     body: await context.fromFile(opts.body, opts.data)
   }))
 
-  if (opts.hasOwnProperty('comments')) {
+  if (has(opts, 'comments')) {
     for (let i = 0; i < opts.comments.length; i++) {
       const comment = opts.comments[i]
       await context.github.issues.createComment(context.repo({

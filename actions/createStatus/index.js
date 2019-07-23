@@ -1,3 +1,4 @@
+const has = require('has')
 const gate = require('../gate')
 
 const realStates = ['pending', 'success', 'failure']
@@ -22,13 +23,13 @@ module.exports = async (context, opts) => {
     sha: opts.sha || context.payload.pull_request.head.sha || context.payload.head_commit.id
   }
 
-  if (opts.hasOwnProperty(state)) {
+  if (has(opts, state)) {
     Object.assign(data, opts[state])
   }
 
   const optional = ['target_url', 'description']
   for (const opt of optional) {
-    if (opts.hasOwnProperty(opt)) {
+    if (has(opts, opt)) {
       data[opt] = opts[opt]
     }
   }

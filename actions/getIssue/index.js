@@ -1,6 +1,8 @@
+const has = require('has')
+
 module.exports = async (context, opts) => {
   let number = context.issue().number
-  if (opts.hasOwnProperty('issue')) {
+  if (has(opts, 'issue')) {
     if (typeof opts.issue === 'string') {
       const { owner, repo } = context.repo()
       const issues = await context.github.search.issues({
