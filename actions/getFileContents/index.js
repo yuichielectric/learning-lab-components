@@ -15,6 +15,12 @@ module.exports = async (context, opts) => {
 
   const tree = await context.github.gitdata.getTree(context.repo({ tree_sha: sha, recursive: 1 }))
   const file = tree.data.tree.find(file => file.path === opts.filename)
-  const blob64 = await context.github.gitdata.getBlob(context.repo({ file_sha: file.sha }))
-  return Buffer.from(blob64.data.content, 'base64').toString()
+
+  try {
+    const blob64 = await context.github.gitdata.getBlob(context.repo({ file_sha: file.sha }))
+    return Buffer.from(blob64.data.content, 'base64').toString()
+  } catch (err) {
+    // Return false if the file does not exist so we can react with `gate`
+    return false
+  }
 }
