@@ -2,6 +2,7 @@
 <p align="center">Open sourced components from <a href="https://lab.github.com/">GitHub Learning Lab</a></p>
 <p align="center">
   <a href="https://github.com/github/learning-lab-components/packages/11396"><img src="https://img.shields.io/github/release/github/learning-lab-components.svg?label=GPR&logo=github" alt="GitHub Package Registry version" /></a>
+  <a href="https://github.com/github/learning-lab-components/actions"><img src="https://action-badges.now.sh/github/learning-lab-components" alt="Build Status" /></a>
   <a href="https://codecov.io/gh/github/learning-lab-components"><img src="https://badgen.now.sh/codecov/c/github/github/learning-lab-components" alt="Code Coverage" /></a>
 </p>
 
