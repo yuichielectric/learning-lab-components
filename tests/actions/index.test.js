@@ -6,7 +6,7 @@ const actions = require('../../actions')
 
 const actionsDir = path.join(__dirname, '..', '..', 'actions')
 
-let actionNames =
+const actionNames =
   fs.readdirSync(actionsDir, { withFileTypes: true })
     .filter(ent => ent.isDirectory())
     .map(ent => ent.name)
@@ -75,7 +75,7 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
       it('has examples which all include a context if there is more than one example', () => {
         const hasMoreThanOneExample = schema.examples.length > 1
 
-        for (let example of schema.examples) {
+        for (const example of schema.examples) {
           expect(isPlainObject(example)).toBe(true)
           expect(example).toHaveProperty('value')
           expect(isPlainObject(example.value)).toBe(true)
