@@ -5,6 +5,8 @@
   <a href="https://github.com/github/learning-lab-components/actions"><img src="https://action-badges.now.sh/github/learning-lab-components" alt="Build Status" /></a>
   <a href="https://codecov.io/gh/github/learning-lab-components"><img src="https://img.shields.io/codecov/c/gh/github/learning-lab-components.svg?label=codecov&logo=codecov&logoColor=FFFFFF" alt="Code Coverage" /></a>
   <img src="https://api.dependabot.com/badges/status?host=github&repo=github/learning-lab-components" alt="Dependabot Enablement" />
+  <a href="https://david-dm.org/github/learning-lab-components"><img src="https://img.shields.io/david/github/learning-lab-components.svg" alt="Dependencies Status" /></a>
+  <a href="https://david-dm.org/github/learning-lab-components?type=dev"><img src="https://img.shields.io/david/dev/github/learning-lab-components.svg?label=devDependencies" alt="devDependencies Status" /></a>
 </p>
 
 ## Overview
