@@ -51,7 +51,7 @@ async function getActionMetadata () {
  * @returns {string} The "schema.js" contents.
  */
 function createSchema ({ name, description }) {
-  const schemaContents = `const Joi = require('joi')
+  const schemaContents = `const Joi = require('@hapi/joi')
 const data = require('../../schemas/data')
 
 module.exports = Joi.object({

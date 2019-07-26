@@ -55,10 +55,12 @@ function mapChildrenToRows (children) {
 function mapExamples (examples, key) {
   const blocks = examples
     .map(obj => {
+      const [value, options] = obj
+
       // Add the `type` property, because including it in the example wouldn't be valid for the schema
-      const yaml = jsYaml.safeDump({ type: key, ...obj.value })
+      const yaml = jsYaml.safeDump({ type: key, ...value })
       // Include the context if it exists
-      const prefix = obj.options && obj.options.context ? `${obj.options.context}\n\n` : ''
+      const prefix = options && options.context ? `${options.context}\n\n` : ''
       return `${prefix}\`\`\`yaml\n${yaml}\`\`\``
     })
     .join('\n\n')

@@ -1,4 +1,4 @@
-const Joi = require('joi')
+const Joi = require('@hapi/joi')
 const gate = require('../gate/schema')
 
 const state = Joi.object({
