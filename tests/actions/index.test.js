@@ -55,7 +55,6 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
     it('has a "schema" property', () => {
       expect(action).toHaveProperty('schema')
       expect(action.schema).toBeTruthy()
-      expect(action.schema.isJoi).toBe(true)
     })
 
     describe('has a schema which', () => {
@@ -76,16 +75,18 @@ ${actionNames.map(name => `- [${name}](./${name})`).join('\n')}
         const hasMoreThanOneExample = schema.examples.length > 1
 
         for (const example of schema.examples) {
-          expect(isPlainObject(example)).toBe(true)
-          expect(example).toHaveProperty('value')
-          expect(isPlainObject(example.value)).toBe(true)
+          expect(Array.isArray(example)).toBe(true)
+          expect(example.length).toBeGreaterThanOrEqual(1)
+          expect(example.length).toBeLessThanOrEqual(2)
+
+          const [value, options] = example
+          expect(isPlainObject(value)).toBe(true)
 
           if (hasMoreThanOneExample) {
-            expect(example).toHaveProperty('options')
-            expect(isPlainObject(example.options)).toBe(true)
-            expect(example.options).toHaveProperty('context')
-            expect(typeof example.options.context).toBe('string')
-            expect(example.options.context.length).toBeGreaterThan(0)
+            expect(isPlainObject(options)).toBe(true)
+            expect(options).toHaveProperty('context')
+            expect(typeof options.context).toBe('string')
+            expect(options.context.length).toBeGreaterThan(0)
           }
         }
       })
