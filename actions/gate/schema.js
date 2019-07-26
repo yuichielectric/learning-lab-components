@@ -1,4 +1,4 @@
-const Joi = require('joi')
+const Joi = require('@hapi/joi')
 const operations = require('./operations')
 
 const gate = Joi.object({
@@ -8,7 +8,7 @@ const gate = Joi.object({
   operator: Joi.string()
     .meta({ label: 'Operator' })
     .description('The conditional operator to use when evaluating the gate.')
-    .valid(Object.keys(operations)),
+    .valid(...Object.keys(operations)),
   right: Joi.alternatives(Joi.number(), Joi.string(), Joi.boolean())
     .meta({ label: 'Right' })
     .description('The right side of the `if`.')
