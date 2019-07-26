@@ -46,13 +46,16 @@
     "test": "standard && jest --coverage"
   },
   "dependencies": {
-    "@hapi/joi": "^16.0.0-rc2",
     "@octokit/rest": "^15.18.1",
     "get-value": "^3.0.1",
     "has": "^1.0.3",
     "htmlparser2": "^3.10.1"
   },
+  "peerDependencies": {
+    "@hapi/joi": "^16.0.0-rc2"
+  },
   "devDependencies": {
+    "@hapi/joi": "^16.0.0-rc2",
     "enquirer": "^2.3.1",
     "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
