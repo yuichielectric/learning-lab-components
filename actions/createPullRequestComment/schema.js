@@ -14,7 +14,7 @@ module.exports = Joi.object({
     .meta({ label: 'Position' })
     .description('The position of the comment to be generated. This is the line number of the combined diff of the pull request.')
     .required(),
-  pullRequest: Joi.alternatives(Joi.number(), Joi.string())
+  pullRequest: Joi.alternatives().try([Joi.number(), Joi.string()])
     .meta({ label: 'Pull request' })
     .description('The title or number of the pull request. If omitted, the comment will be created on the pull request from the trigger event.'),
   data

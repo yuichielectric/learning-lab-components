@@ -14,7 +14,7 @@ module.exports = Joi.object({
   number: Joi.number()
     .meta({ label: 'Number (deprecated)' })
     .description('The number of the pull request.'),
-  pullRequest: Joi.alternatives(Joi.number(), Joi.string())
+  pullRequest: Joi.alternatives().try([Joi.number(), Joi.string()])
     .meta({ label: 'Pull request' })
     .description('The title or number of the pull request. If omitted, the comment will be created on the pull request from the trigger event.'),
   data

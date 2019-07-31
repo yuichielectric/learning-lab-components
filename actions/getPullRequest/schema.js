@@ -1,7 +1,7 @@
 const Joi = require('@hapi/joi')
 
 module.exports = Joi.object({
-  pullRequest: Joi.alternatives(Joi.string(), Joi.number())
+  pullRequest: Joi.alternatives().try([Joi.number(), Joi.string()])
     .meta({ label: 'Pull request' })
     .description('The number or title of the pull request to get. This will default to the pull request number from the trigger event.'),
   waitForMergeable: Joi.boolean()
