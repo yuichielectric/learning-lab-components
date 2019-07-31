@@ -1,7 +1,7 @@
 const Joi = require('@hapi/joi')
 
 module.exports = Joi.object({
-  issue: Joi.alternatives(Joi.string(), Joi.number())
+  issue: Joi.alternatives().try([Joi.number(), Joi.string()])
     .meta({ label: 'Issue' })
     .description('The number or title of the issue to assign.')
 })

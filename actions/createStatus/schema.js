@@ -10,7 +10,11 @@ const state = Joi.object({
 })
 
 module.exports = Joi.object({
-  state: Joi.alternatives(Joi.string().valid('error', 'failure', 'pending', 'success'), gate)
+  state: Joi.alternatives()
+    .try([
+      Joi.string().valid('error', 'failure', 'pending', 'success'),
+      gate
+    ])
     .meta({ label: 'State' })
     .description('The state of the status to create.')
     .required(),
