@@ -2,6 +2,9 @@
 
 Actions are reusable modules that each course has access to. They are each designed to do very specific things, and nothing more. This is to optimize for reusability and simplicity.
 
+<!-- Reminder: Although the following paragraph might seem odd to exist within the same repo, it is also integrated into the external documentation for Learning Lab, e.g. https://lab.github.com/docs/actions/ -->
+If you would like to contribute to the evolution of these actions, we encourage you to collaborate with us in the [open source `github/learning-lab-components` repository](https://github.com/github/learning-lab-components).
+
 ## Available actions
 
 <!-- START_ACTIONS_LIST -->
