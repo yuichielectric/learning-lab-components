@@ -1,6 +1,7 @@
 const ROUTES = require('@octokit/rest/lib/routes')
 const get = require('get-value')
 const has = require('has')
+const allowedMethods = require('./allowed-methods.json')
 
 module.exports = async (context, opts) => {
   const { method, requester, ...data } = opts
@@ -8,6 +9,9 @@ module.exports = async (context, opts) => {
   const client = opts.requester && opts.requester === 'user' ? context.user.client : context.github
   const octokitMethod = get(client, method)
   if (!octokitMethod) throw new Error(`Octokit method \`${method}\` does not exist.`)
+
+  // Only allow specific methods
+  if (!allowedMethods.includes(method)) throw new Error(`Octokit method \`${method}\` is not allowed.`)
 
   // Validate the provided data
   let route = get(ROUTES, method)
