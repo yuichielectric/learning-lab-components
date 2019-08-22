@@ -6,7 +6,8 @@ describe('octokit', () => {
 
   beforeEach(() => {
     context = mockContext({}, {
-      issues: { create: jest.fn() }
+      issues: { create: jest.fn() },
+      orgs: { addOrUpdateMembership: jest.fn() }
     })
   })
 
@@ -28,6 +29,15 @@ describe('octokit', () => {
     try {
       // Omitting the `title` field
       await octokit(context, { method: 'issues.create', body: 'test' })
+    } catch (e) {
+      expect(e).toMatchSnapshot()
+    }
+  })
+
+  it('throws if the provided method is not on the list of allowed methods', async () => {
+    try {
+      // Omitting the `title` field
+      await octokit(context, { method: 'orgs.addOrUpdateMembership', body: 'test' })
     } catch (e) {
       expect(e).toMatchSnapshot()
     }
