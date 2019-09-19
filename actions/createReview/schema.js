@@ -21,27 +21,25 @@ module.exports = Joi.object({
 })
   .description('Creates a Pull Request review on GitHub')
   .example([
-    [
-      {
-        body: 'review-body.md',
-        event: 'REQUEST_CHANGES'
-      },
-      { context: 'Create a review on the pull request from the webhook event:' }
-    ],
-    [
-      {
-        body: 'review-body.md',
-        event: 'REQUEST_CHANGES',
-        pullRequest: 3
-      },
-      { context: 'Use the number of a pull request:' }
-    ],
-    [
-      {
-        body: 'review-body.md',
-        event: 'REQUEST_CHANGES',
-        pullRequest: 'A pull request'
-      },
-      { context: 'Use a pull request title:' }
-    ]
+    {
+      body: 'review-body.md',
+      event: 'REQUEST_CHANGES'
+    },
+    { context: 'Create a review on the pull request from the webhook event:' }
+  ])
+  .example([
+    {
+      body: 'review-body.md',
+      event: 'REQUEST_CHANGES',
+      pullRequest: 3
+    },
+    { context: 'Use the number of a pull request:' }
+  ])
+  .example([
+    {
+      body: 'review-body.md',
+      event: 'REQUEST_CHANGES',
+      pullRequest: 'A pull request'
+    },
+    { context: 'Use a pull request title:' }
   ])

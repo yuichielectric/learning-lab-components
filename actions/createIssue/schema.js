@@ -18,13 +18,11 @@ module.exports = Joi.object({
 })
   .description('Creates a new issue on GitHub.')
   .example([
-    [
-      {
-        title: 'Title of the issue',
-        body: 'issue-body.md',
-        comments: [
-          'issue-comment.md'
-        ]
-      }
-    ]
+    {
+      title: 'Title of the issue',
+      body: 'issue-body.md',
+      comments: [
+        'issue-comment.md'
+      ]
+    }
   ])

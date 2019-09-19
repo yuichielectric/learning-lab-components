@@ -16,20 +16,18 @@ module.exports = Joi.object({
 })
   .description('Creates a new Project Board in the user\'s repository')
   .example([
-    [
-      { name: 'New board' },
-      { context: 'Create a new project board:' }
-    ],
-    [
-      {
-        name: 'New board',
-        description: 'This board is the best board',
-        columns: [
-          'To do',
-          'In progress',
-          'Done'
-        ]
-      },
-      { context: 'Create a project board with a description and some columns:' }
-    ]
+    { name: 'New board' },
+    { context: 'Create a new project board:' }
+  ])
+  .example([
+    {
+      name: 'New board',
+      description: 'This board is the best board',
+      columns: [
+        'To do',
+        'In progress',
+        'Done'
+      ]
+    },
+    { context: 'Create a project board with a description and some columns:' }
   ])

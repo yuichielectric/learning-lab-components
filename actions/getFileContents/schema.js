@@ -11,8 +11,6 @@ module.exports = Joi.object({
 })
   .description('Gets the contents of a file at a specific commit.')
   .example([
-    [
-      { filename: 'README.md' },
-      { context: 'Get the contents of a file:' }
-    ]
+    { filename: 'README.md' },
+    { context: 'Get the contents of a file:' }
   ])

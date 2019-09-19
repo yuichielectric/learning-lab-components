@@ -15,19 +15,17 @@ module.exports = Joi.object({
 })
   .description('Checks if the provided HTML string contains a specific HTML tag')
   .example([
-    [
-      {
-        html: '<html><div>Hello!</div></html>',
-        tag: 'div'
-      },
-      { context: 'Check if the provided HTML code contains a `<div>` tag:' }
-    ],
-    [
-      {
-        html: '<html><img src="example.png" /></html>',
-        tag: 'img',
-        attribute: 'src'
-      },
-      { context: 'Check if the provided HTML code contains an `<img>` tag with an `src` attribute:' }
-    ]
+    {
+      html: '<html><div>Hello!</div></html>',
+      tag: 'div'
+    },
+    { context: 'Check if the provided HTML code contains a `<div>` tag:' }
+  ])
+  .example([
+    {
+      html: '<html><img src="example.png" /></html>',
+      tag: 'img',
+      attribute: 'src'
+    },
+    { context: 'Check if the provided HTML code contains an `<img>` tag with an `src` attribute:' }
   ])

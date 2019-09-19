@@ -7,16 +7,14 @@ module.exports = Joi.object({
 })
   .description('Requests a Pull Request review from the registrant')
   .example([
-    [
-      {
-        pullRequest: 'A pull request'
-      },
-      { context: 'Use the title of a pull request:' }
-    ],
-    [
-      {
-        pullRequest: 2
-      },
-      { context: 'Use a pull request number:' }
-    ]
+    {
+      pullRequest: 'A pull request'
+    },
+    { context: 'Use the title of a pull request:' }
+  ])
+  .example([
+    {
+      pullRequest: 2
+    },
+    { context: 'Use a pull request number:' }
   ])
