@@ -19,7 +19,7 @@ module.exports = Joi.object({
   data
 })
   .description('Creates a new file')
-  .example(
+  .example([
     [
       {
         filename: 'README.md',
@@ -47,4 +47,4 @@ module.exports = Joi.object({
       },
       { context: 'Name the file something new in the repository:' }
     ]
-  )
+  ])

@@ -25,7 +25,7 @@ module.exports = Joi.object({
   data
 })
   .description('Opens a new Pull Request on GitHub.')
-  .example(
+  .example([
     [
       {
         title: 'Title of the Pull Request',
@@ -54,4 +54,4 @@ module.exports = Joi.object({
       },
       { context: 'Create a pull request to a specified `base` branch:' }
     ]
-  )
+  ])

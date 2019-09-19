@@ -12,7 +12,7 @@ module.exports = Joi.object({
   data
 })
   .description('Posts a comment on an issue or pull request')
-  .example(
+  .example([
     [
       { with: 'my-response.md' },
       { context: 'Respond to the issue from the webhook event:' }
@@ -31,4 +31,4 @@ module.exports = Joi.object({
       },
       { context: 'Use the number of an issue:' }
     ]
-  )
+  ])

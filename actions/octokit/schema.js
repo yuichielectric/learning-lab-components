@@ -7,7 +7,7 @@ module.exports = Joi.object({
     .required()
 }).options({ allowUnknown: true })
   .description('Calls a method in the Octokit library. [https://octokit.github.io/rest.js/](https://octokit.github.io/rest.js/)')
-  .example(
+  .example([
     [
       {
         method: 'repos.update',
@@ -15,4 +15,4 @@ module.exports = Joi.object({
       },
       { context: 'Use the `repos.update` method to change the repository\'s description:' }
     ]
-  )
+  ])

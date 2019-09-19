@@ -20,7 +20,7 @@ module.exports = Joi.object({
   data
 })
   .description('Creates a comment on a pull request on GitHub')
-  .example(
+  .example([
     [
       {
         body: 'suggested-changes.md',
@@ -47,4 +47,4 @@ module.exports = Joi.object({
       },
       { context: 'Use a pull request title:' }
     ]
-  )
+  ])

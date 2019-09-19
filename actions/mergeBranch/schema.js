@@ -11,7 +11,7 @@ module.exports = Joi.object({
     .default('master')
 })
   .description('Merges a branch into another branch')
-  .example(
+  .example([
     [
       { head: 'a-feature-branch' },
       { context: 'Merge `a-feature-branch` into the `master` branch:' }
@@ -23,4 +23,4 @@ module.exports = Joi.object({
       },
       { context: 'Merge `a-feature-branch` into a specific branch:' }
     ]
-  )
+  ])

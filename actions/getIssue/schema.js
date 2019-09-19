@@ -6,7 +6,7 @@ module.exports = Joi.object({
     .description('The number or title of the issue to get. This will default to the issue number from the trigger event.')
 })
   .description('Gets an Issue from GitHub.')
-  .example(
+  .example([
     [
       { issue: 'An existing issue' },
       { context: 'Use the title of an issue:' }
@@ -15,4 +15,4 @@ module.exports = Joi.object({
       { issue: 1 },
       { context: 'Use an issue number:' }
     ]
-  )
+  ])

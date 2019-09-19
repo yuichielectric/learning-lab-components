@@ -29,7 +29,7 @@ module.exports = gate.append({
     .single()
 })
   .description('Decides if the next action(s) should be run, and if the step passes or fails.')
-  .example(
+  .example([
     [
       {
         left: 'hello',
@@ -77,4 +77,4 @@ module.exports = gate.append({
       },
       { context: 'Test multiple conditions:' }
     ]
-  )
+  ])

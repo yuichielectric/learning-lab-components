@@ -30,7 +30,7 @@ module.exports = Joi.object({
     .description('A unique identifier for this status - this can be used to overwrite an existing status on the same sha.')
 })
   .description('Creates a status on a commit or pull request')
-  .example(
+  .example([
     [
       {
         state: {
@@ -56,4 +56,4 @@ module.exports = Joi.object({
       },
       { context: 'Specify a context to be able to overwrite the status in a later action:' }
     ]
-  )
+  ])

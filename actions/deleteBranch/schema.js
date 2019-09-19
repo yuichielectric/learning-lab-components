@@ -7,9 +7,9 @@ module.exports = Joi.object({
     .required()
 })
   .description('Deletes the provided branch')
-  .example(
+  .example([
     [
       { branch: 'example-branch' },
       { context: 'Delete the `example-branch` branch:' }
     ]
-  )
+  ])

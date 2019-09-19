@@ -14,7 +14,7 @@ module.exports = Joi.object({
     .description('An optional HTML attribute to check for.')
 })
   .description('Checks if the provided HTML string contains a specific HTML tag')
-  .example(
+  .example([
     [
       {
         html: '<html><div>Hello!</div></html>',
@@ -30,4 +30,4 @@ module.exports = Joi.object({
       },
       { context: 'Check if the provided HTML code contains an `<img>` tag with an `src` attribute:' }
     ]
-  )
+  ])

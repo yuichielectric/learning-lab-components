@@ -15,7 +15,7 @@ module.exports = Joi.object({
     .min(1)
 })
   .description('Creates a new Project Board in the user\'s repository')
-  .example(
+  .example([
     [
       { name: 'New board' },
       { context: 'Create a new project board:' }
@@ -32,4 +32,4 @@ module.exports = Joi.object({
       },
       { context: 'Create a project board with a description and some columns:' }
     ]
-  )
+  ])

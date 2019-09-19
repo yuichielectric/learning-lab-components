@@ -17,7 +17,7 @@ module.exports = Joi.object({
   data
 })
   .description('Creates a new issue on GitHub.')
-  .example(
+  .example([
     [
       {
         title: 'Title of the issue',
@@ -27,4 +27,4 @@ module.exports = Joi.object({
         ]
       }
     ]
-  )
+  ])

@@ -26,7 +26,7 @@ module.exports = Joi.object({
     .meta({ label: 'Required pull request reviews' })
 })
   .description('Updates the branch protection on a branch in the course repository')
-  .example(
+  .example([
     [
       {},
       { context: 'Add branch protection to the `master` branch:' }
@@ -39,4 +39,4 @@ module.exports = Joi.object({
       { enforce_admins: false },
       { context: 'Include specific branch protection settings:' }
     ]
-  )
+  ])

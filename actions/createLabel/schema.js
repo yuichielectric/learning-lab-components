@@ -15,7 +15,7 @@ module.exports = Joi.object({
     .description('The description of the label.')
 })
   .description('Creates a new label on GitHub.')
-  .example(
+  .example([
     [
       {
         name: 'a label',
@@ -31,4 +31,4 @@ module.exports = Joi.object({
       },
       { context: 'A description can also be included:' }
     ]
-  )
+  ])

@@ -6,7 +6,7 @@ module.exports = Joi.object({
     .description('The number or title of the pull request to request a review. This will default to the pull request number from the trigger event.')
 })
   .description('Requests a Pull Request review from the registrant')
-  .example(
+  .example([
     [
       {
         pullRequest: 'A pull request'
@@ -19,4 +19,4 @@ module.exports = Joi.object({
       },
       { context: 'Use a pull request number:' }
     ]
-  )
+  ])
