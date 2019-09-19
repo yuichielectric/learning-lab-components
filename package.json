@@ -56,13 +56,13 @@
   },
   "devDependencies": {
     "@hapi/joi": "^16.0.0-rc2",
-    "enquirer": "^2.3.1",
+    "enquirer": "^2.3.2",
     "jest": "^24.9.0",
     "js-yaml": "^3.13.1",
     "lodash.isplainobject": "^4.0.6",
     "nock": "^10.0.6",
     "probot": "^7.5.3",
-    "standard": "^14.0.2"
+    "standard": "^14.3.1"
   },
   "standard": {
     "env": [
