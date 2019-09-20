@@ -35,6 +35,8 @@ jobs:
     needs: [publish_draft_release_on_version_bump]
     runs-on: ubuntu-latest
     steps:
+      # Does a checkout of your repository at the pushed commit SHA
+      - uses: actions/checkout@v1
       # Validate the Release follows Semantic Versioning rules
       - uses: JasonEtco/validate-semver-release@master
 
