@@ -77,7 +77,7 @@ function generate (actionKey) {
 
   return template({
     key: actionKey,
-    title: (schema.meta && schema.meta[0] && schema.meta[0].label) || actionKey,
+    title: (schema.metas && schema.metas[0] && schema.metas[0].label) || actionKey,
     description: schema.flags.description || '',
     rows,
     examples
